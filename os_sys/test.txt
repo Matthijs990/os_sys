@@ -7,8 +7,12 @@ import socket as s
 from time import *
 import time as _time
 import tkinter, time, subprocess as sub, wifi, subprocess
-__all__ = ['info','win_version','cmd_filter_haak','filter_zin','filter_regel',
-           'cmd_out_list','cmd_out']
+from errors import *
+__all__ = ['main_dir', 'cmd(command)', 'info(module)', 'win_version()', 'cmd_filter_haak(command) filters the ([{}]) from cmd outputs', 'filter_regel(cmd_command_or_data) replace \\n with a real \n', 'cmd_out_list(command_or_data) replace \\n with \n and make a list with as split \\n',
+           'cmd_out(command_or_data) replace \\n with a real \n', 'class ColorPrint:', ['print_fail(message)', 'print_pass(message)', 'print_warn(message)',
+                                                                   'print_info(message)', 'print_bold(message)']
+           ]
+
 main_dir = os.path.split(os.path.abspath(__file__))[0]
 working = True
 def w():
@@ -83,7 +87,7 @@ def cmd_filter_haak(op):
                         break
                     continue
     return message
-
+cmd_filter_haak('ping')
 def filter_zin(zine):
     zin = ''
     into = ''

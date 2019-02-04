@@ -1,0 +1,1 @@
+*.init/*.exe/*.data/*.nim/*.config/*.set/*.make/*.setting/*.reset/*.back_up/*.lib/*.h/*.py/*.pyw

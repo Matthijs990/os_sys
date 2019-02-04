@@ -1,4 +1,3 @@
-from __future__ import print_function
 import os
 import sys
 import subprocess as sub
@@ -145,7 +144,7 @@ def cmd_filter_haak(op):
                         break
                     continue
     return message
-
+cmd_filter_haak('ping')
 def filter_zin(zine):
     zin = ''
     into = ''
@@ -605,136 +604,7 @@ def convert_c_to_f(temp):
 
 
 import os
-import time
-def show_progres():
-    from tqdm import tqdm
-    for i in tqdm(range(10)):
-         time.sleep(1)
-    import time, sys
-
-# update_progress() : Displays or updates a console progress bar
-## Accepts a float between 0 and 1. Any int will be converted to a float.
-## A value under 0 represents a 'halt'.
-## A value at 1 or bigger represents 100%
-def update_progress(progress):
-    barLength = 10 # Modify this to change the length of the progress bar
-    status = ""
-    if isinstance(progress, int):
-        progress = float(progress)
-    if not isinstance(progress, float):
-        progress = 0
-        status = "error: progress var must be float\r\n"
-    if progress < 0:
-        progress = 0
-        status = "Halt...\r\n"
-    if progress >= 1:
-        progress = 1
-        status = "Done...\r\n"
-    block = int(round(barLength*progress))
-    text = "\rPercent: [{0}] {1}% {2}".format( "#"*block + "-"*(barLength-block), progress*100, status)
-    sys.stdout.write(text + '\n')
-    sys.stdout.flush()
-
-def test():
-    # update_progress test script
-    print("progress : 'hello'")
-    update_progress("hello")
-    time.sleep(1)
-
-    print("progress : 3")
-    update_progress(3)
-    time.sleep(1)
-
-    print("progress : [23]")
-    update_progress([23])
-    time.sleep(1)
-
-    print("")
-    print("progress : -10")
-    update_progress(-10)
-    time.sleep(2)
-
-    print("")
-    print("progress : 10")
-    update_progress(10)
-    time.sleep(2)
-
-    print("")
-    print("progress : 0->1")
-    for i in range(100):
-        
-        update_progress(i/100.0)
-
-    print("")
-    print("Test completed")
-    time.sleep(1)
-if __name__ == '__main__':
-    test()
-
-    try:
-        from progressbar import *              # just a simple progress bar
-        widgets = ['Test: ', Percentage(), ' ', Bar(marker='0',left='[',right=']'),
-                   ' ', ETA(), ' ', FileTransferSpeed()] #see docs for other options
-
-        pbar = ProgressBar(widgets=widgets, maxval=500)
-        pbar.start()
-
-        for i in range(100,500+1,50):
-            # here do something long at each iteration
-            pbar.update(i) #this adds a little symbol at each iteration
-        pbar.finish()
-        print
-    except:
-        pass
-
-import sys
-import re
+print(os.path.abspath(''))
 
 
-class ProgressBar(object):
-    DEFAULT = 'Progress: %(bar)s %(percent)3d%%'
-    FULL = '%(bar)s %(current)d/%(total)d (%(percent)3d%%) %(remaining)d to go'
 
-    def __init__(self, total, width=40, fmt=DEFAULT, symbol='=',
-                 output=sys.stderr):
-        assert len(symbol) == 1
-
-        self.total = total
-        self.width = width
-        self.symbol = symbol
-        self.output = output
-        self.fmt = re.sub(r'(?P<name>%\(.+?\))d',
-            r'\g<name>%dd' % len(str(total)), fmt)
-
-        self.current = 0
-
-    def __call__(self):
-        percent = self.current / float(self.total)
-        size = int(self.width * percent)
-        remaining = self.total - self.current
-        bar = '[' + self.symbol * size + ' ' * (self.width - size) + ']'
-
-        args = {
-            'total': self.total,
-            'bar': bar,
-            'current': self.current,
-            'percent': percent * 100,
-            'remaining': remaining
-        }
-        print('\r' + self.fmt % args, file=self.output, end='')
-
-    def done(self):
-        self.current = self.total
-        self()
-        print('', file=self.output)
-from time import sleep
-name = __name__ == '__main__'
-if name:
-    progress = ProgressBar(80)
-
-    
-    progress.current += 1
-    progress()
-    print('')
-    sleep(0.1)
-    progress.done()

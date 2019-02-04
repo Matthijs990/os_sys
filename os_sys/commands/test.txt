@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=320">
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<link href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<!-- Google Tag Manager -->
+<script data-skip-moving="true">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NH7LBR');</script>
+<!-- End Google Tag Manager -->
+		<meta property="og:url" content="https://www.bitrix24.net/" />
+		<meta property="og:image" content="https://www.bitrix24.net/bitrix/templates/network_login/images/b24_screen_en.png" />
+	<link href="/bitrix/cache/css/s1/network_login/kernel_main/kernel_main.css?152839991819041" type="text/css" rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/network_login/page_fa5bc93e8e0eb8f1cd5be0dbf24abdd6/page_fa5bc93e8e0eb8f1cd5be0dbf24abdd6.css?15283997064768" type="text/css" rel="stylesheet" />
+<link href="/bitrix/cache/css/s1/network_login/template_c248d8a2e428091ff3a0bb6bb169991a/template_c248d8a2e428091ff3a0bb6bb169991a.css?154607305450569" type="text/css" data-template-style="true" rel="stylesheet" />
+	<script type="text/javascript">if(!window.BX)window.BX={};if(!window.BX.message)window.BX.message=function(mess){if(typeof mess=='object') for(var i in mess) BX.message[i]=mess[i]; return true;};</script>
+<script type="text/javascript">(window.BX||top.BX).message({'JS_CORE_LOADING':'Loading...','JS_CORE_WINDOW_CLOSE':'Close','JS_CORE_WINDOW_EXPAND':'Expand','JS_CORE_WINDOW_NARROW':'Restore','JS_CORE_WINDOW_SAVE':'Save','JS_CORE_WINDOW_CANCEL':'Cancel','JS_CORE_H':'h','JS_CORE_M':'m','JS_CORE_S':'s','JS_CORE_NO_DATA':'- No data -','JSADM_AI_HIDE_EXTRA':'Hide extra items','JSADM_AI_ALL_NOTIF':'All notifications','JSADM_AUTH_REQ':'Authentication is required!','JS_CORE_WINDOW_AUTH':'Log In','JS_CORE_IMAGE_FULL':'Full size','JS_CORE_WINDOW_CONTINUE':'Continue'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'B24NET_INVITE_TITLE':'Send invitation','B24NET_INVITE_TEXT':'Send this link to #NAME# to invite them:','B24NET_INVITE_SEND':'Send','B24NET_INVITE_SENT':'Invite has been sent.','B24NET_INVITE_ERROR':'Error sending invite.','B24NET_SOC_WIZARD':'Add friends to your <br>Bitrix24.Network','B24NET_EMAIL_EMPTY_ERROR':'No email address shown','B24NET_EMAIL_INCORRECT_ERROR':'Invalid email'});</script>
+<script type="text/javascript">(window.BX||top.BX).message({'LANGUAGE_ID':'en','FORMAT_DATE':'DD.MM.YYYY','FORMAT_DATETIME':'DD.MM.YYYY HH:MI:SS','COOKIE_PREFIX':'BITRIX_SM','SERVER_TZ_OFFSET':'10800','SITE_ID':'s1','SITE_DIR':'/','USER_ID':'','SERVER_TIME':'1548585486','USER_TZ_OFFSET':'0','USER_TZ_AUTO':'Y','bitrix_sessid':'2bac0f975eefa90951290322e8053e9b'});</script>
+
+
+<script type="text/javascript"  src="/bitrix/cache/js/s1/network_login/kernel_main/kernel_main.js?1528399942160860"></script>
+<script type="text/javascript"  src="/bitrix/cache/js/s1/network_login/kernel_b24network/kernel_b24network.js?152839970613226"></script>
+<script type="text/javascript"  src="/bitrix/cache/js/s1/network_login/kernel_socialservices/kernel_socialservices.js?15283997061659"></script>
+<script type="text/javascript">BX.setJSList(['/bitrix/js/main/core/core.js','/bitrix/js/main/core/core_ajax.js','/bitrix/js/main/core/core_popup.js','/bitrix/js/main/json/json2.min.js','/bitrix/js/main/core/core_ls.js','/bitrix/js/b24network/b24network.js','/bitrix/js/socialservices/ss.js']); </script>
+<script type="text/javascript">BX.setCSSList(['/bitrix/js/main/core/css/core.css','/bitrix/js/main/core/css/core_popup.css','/bitrix/js/socialservices/css/ss.css','/bitrix/js/b24network/css/b24network.css','/bitrix/components/bitrix/b24network.mobilepopup/templates/.default/style.css','/bitrix/templates/network_login/template_styles.css']); </script>
+<script type="text/javascript">var bxDate = new Date(); document.cookie="BITRIX_SM_TIME_ZONE="+bxDate.getTimezoneOffset()+"; path=/; expires=Fri, 01-Jan-2038 00:00:00 GMT"</script>
+
+<script type="text/javascript"  src="/bitrix/cache/js/s1/network_login/template_a38bb9c0c14b2de2819968cb6fa9dac8/template_a38bb9c0c14b2de2819968cb6fa9dac8.js?15246915611229"></script>
+<script type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "3b33ffbe22d842a186f2cab76bf7921a"]); _ba.push(["host", "www.bitrix24.net"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
+
+
+
+	<title>Bitrix24.Network</title>
+	<link href="/bitrix/templates/network_login/buttons.css" rel="stylesheet" media="all" />
+	<!--[if IE 8]><link href="/bitrix/templates/network_login/ie8.css" rel="stylesheet" media="all" /><![endif]-->
+</head>
+<body class="home en">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH7LBR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="wrap ">
+		<div class="header m0a ">
+			<div class="b_6">
+				<a href="/" class="b24networlk_logo" style="background-image: url('/bitrix/templates/network_login/images/b24network_darklogo_en.png');"></a>
+			</div>
+			<div class="b_6 clb container_profile">
+				<div class="b_2 block_Language popup_container lng_en" id="b24net_lang_block" onclick="//BX('b24net_lang_popup').style.display='block'">
+					<div class="active"><span class="selected_lng icon bx-lang-btn-icon"><span class="arrow"></span></span></div>
+				</div>
+			</div>
+		</div>
+		<div class="ovh">
+
+	<div class="m0a workarea reg">
+		<div class="login_block_page">
+			<div class="b_6 tal reg_link clb active">Sign in</div>
+			<div class="b_6 tar login_title">
+		<a href="/passport24/" class="help">Help</a></div>
+
+			<div style="clear: both;"></div>
+			<hr class="b_line_gray">
+
+			<div class="b_12" >
+
+				<div class="good_message">
+					
+					<span id="b24net_auth_error">
+						To enter <span class="imp">b24-rejckj.bitrix24.com</span>, please sign in using your e-mail and password, or a social network account. <a href="/passport24/" class="help">Help</a>					</span>
+				</div>
+
+			</div>
+
+			<div class="form_group inline b_9 fln m0a">
+			
+<div class="social-auth-block">
+	<div class="social-auth-btn-container">
+		<a class="social-auth-btn social-auth-btn-facebook" onclick="BX.util.popup('https://www.facebook.com/dialog/oauth?client_id=751257608227496&amp;redirect_uri=https%3A%2F%2Fwww.bitrix24.net%2Fbitrix%2Ftools%2Foauth%2Ffacebook.php&amp;scope=email,user_friends&amp;display=popup&amp;state=site_id%3Ds1%26backurl%3D%252Foauth%252Fauthorize%252F%253Fcheck_key%253D0be09a93ae111af2879a7b11e13e7647%2526user_lang%253Den%2526client_id%253Db24.5c4d87c0e40b82.54925792%2526redirect_uri%253Dhttps%25253A%25252F%25252Fb24-rejckj.bitrix24.com%25252Fdisk%25252FdownloadFile%25252F42%25252F%25253Fauth_service_id%25253DBitrix24Net%252526ncc%25253D1%252526filename%25253Dsetup.py%252526action%25253DdownloadFile%252526fileId%25253D42%2526scope%253Dauth%25252Cprofile%2526response_type%253Dcode%2526mode%253Dpage%2526state%253Dsite_id%25253Ds1%252526backurl%25253D%2525252Fdisk%2525252FdownloadFile%2525252F42%2525252F%2525253Fcheck_key%2525253Df9be6f531b3aa2c63badf6a11d09ad95%25252526ncc%2525253D1%25252526filename%2525253Dsetup.py%25252526action%2525253DdownloadFile%25252526fileId%2525253D42%252526mode%25253Dpage%26redirect_url%3D%252Foauth%252Fauthorize%252F%253Fuser_lang%253Den%2526client_id%253Db24.5c4d87c0e40b82.54925792%2526redirect_uri%253Dhttps%25253A%25252F%25252Fb24-rejckj.bitrix24.com%25252Fdisk%25252FdownloadFile%25252F42%25252F%25253Fauth_service_id%25253DBitrix24Net%252526ncc%25253D1%252526filename%25253Dsetup.py%252526action%25253DdownloadFile%252526fileId%25253D42%2526scope%253Dauth%25252Cprofile%2526response_type%253Dcode%2526mode%253Dpage%2526state%253Dsite_id%25253Ds1%252526backurl%25253D%2525252Fdisk%2525252FdownloadFile%2525252F42%2525252F%2525253Fcheck_key%2525253Df9be6f531b3aa2c63badf6a11d09ad95%25252526ncc%2525253D1%25252526filename%2525253Dsetup.py%25252526action%2525253DdownloadFile%25252526fileId%2525253D42%252526mode%25253Dpage', 580, 400)" id="bx_auth_href_Facebook" href="javascript:void(0)">
+			<span class="social-auth-btn-logo social-auth-btn-logo-facebook"></span>
+		</a>
+	</div>
+	<div class="social-auth-btn-container">
+		<a class="social-auth-btn social-auth-btn-office365" onclick="BX.util.popup('https://login.microsoftonline.com/common/oauth2/authorize?client_id=786d7aab-1054-4475-8ec7-d050ffe38ec6&amp;redirect_uri=https%3A%2F%2Fwww.bitrix24.net%2Fbitrix%2Ftools%2Foauth%2Foffice365.php&amp;response_type=code&amp;resource=https%3A%2F%2Fgraph.microsoft.com&amp;state=site_id%3Ds1%26backurl%3D%252Foauth%252Fauthorize%252F%253Fcheck_key%253D0be09a93ae111af2879a7b11e13e7647%2526user_lang%253Den%2526client_id%253Db24.5c4d87c0e40b82.54925792%2526redirect_uri%253Dhttps%25253A%25252F%25252Fb24-rejckj.bitrix24.com%25252Fdisk%25252FdownloadFile%25252F42%25252F%25253Fauth_service_id%25253DBitrix24Net%252526ncc%25253D1%252526filename%25253Dsetup.py%252526action%25253DdownloadFile%252526fileId%25253D42%2526scope%253Dauth%25252Cprofile%2526response_type%253Dcode%2526mode%253Dpage%2526state%253Dsite_id%25253Ds1%252526backurl%25253D%2525252Fdisk%2525252FdownloadFile%2525252F42%2525252F%2525253Fcheck_key%2525253Df9be6f531b3aa2c63badf6a11d09ad95%25252526ncc%2525253D1%25252526filename%2525253Dsetup.py%25252526action%2525253DdownloadFile%25252526fileId%2525253D42%252526mode%25253Dpage%26redirect_url%3D%252Foauth%252Fauthorize%252F%253Fuser_lang%253Den%2526client_id%253Db24.5c4d87c0e40b82.54925792%2526redirect_uri%253Dhttps%25253A%25252F%25252Fb24-rejckj.bitrix24.com%25252Fdisk%25252FdownloadFile%25252F42%25252F%25253Fauth_service_id%25253DBitrix24Net%252526ncc%25253D1%252526filename%25253Dsetup.py%252526action%25253DdownloadFile%252526fileId%25253D42%2526scope%253Dauth%25252Cprofile%2526response_type%253Dcode%2526mode%253Dpage%2526state%253Dsite_id%25253Ds1%252526backurl%25253D%2525252Fdisk%2525252FdownloadFile%2525252F42%2525252F%2525253Fcheck_key%2525253Df9be6f531b3aa2c63badf6a11d09ad95%25252526ncc%2525253D1%25252526filename%2525253Dsetup.py%25252526action%2525253DdownloadFile%25252526fileId%2525253D42%252526mode%25253Dpage%26mode%3Dopener', 580, 400)" id="bx_auth_href_Office365" href="javascript:void(0)">
+			<span class="social-auth-btn-logo social-auth-btn-logo-office365"></span>
+		</a>
+	</div>
+	<div class="social-auth-btn-container">
+		<a class="social-auth-btn social-auth-btn-liveid" onclick="BX.util.popup('https://login.live.com/oauth20_authorize.srf?client_id=000000004C22070B&amp;redirect_uri=https%3A%2F%2Fwww.bitrix24.net%2Fbitrix%2Ftools%2Foauth%2Fliveid.php&amp;scope=wl.signin+wl.basic+wl.offline_access+wl.emails&amp;response_type=code&amp;state=site_id%3Ds1%26backurl%3D%252Foauth%252Fauthorize%252F%253Fcheck_key%253D0be09a93ae111af2879a7b11e13e7647%2526user_lang%253Den%2526client_id%253Db24.5c4d87c0e40b82.54925792%2526redirect_uri%253Dhttps%25253A%25252F%25252Fb24-rejckj.bitrix24.com%25252Fdisk%25252FdownloadFile%25252F42%25252F%25253Fauth_service_id%25253DBitrix24Net%252526ncc%25253D1%252526filename%25253Dsetup.py%252526action%25253DdownloadFile%252526fileId%25253D42%2526scope%253Dauth%25252Cprofile%2526response_type%253Dcode%2526mode%253Dpage%2526state%253Dsite_id%25253Ds1%252526backurl%25253D%2525252Fdisk%2525252FdownloadFile%2525252F42%2525252F%2525253Fcheck_key%2525253Df9be6f531b3aa2c63badf6a11d09ad95%25252526ncc%2525253D1%25252526filename%2525253Dsetup.py%25252526action%2525253DdownloadFile%25252526fileId%2525253D42%252526mode%25253Dpage%26redirect_url%3D%252Foauth%252Fauthorize%252F%253Fuser_lang%253Den%2526client_id%253Db24.5c4d87c0e40b82.54925792%2526redirect_uri%253Dhttps%25253A%25252F%25252Fb24-rejckj.bitrix24.com%25252Fdisk%25252FdownloadFile%25252F42%25252F%25253Fauth_service_id%25253DBitrix24Net%252526ncc%25253D1%252526filename%25253Dsetup.py%252526action%25253DdownloadFile%252526fileId%25253D42%2526scope%253Dauth%25252Cprofile%2526response_type%253Dcode%2526mode%253Dpage%2526state%253Dsite_id%25253Ds1%252526backurl%25253D%2525252Fdisk%2525252FdownloadFile%2525252F42%2525252F%2525253Fcheck_key%2525253Df9be6f531b3aa2c63badf6a11d09ad95%25252526ncc%2525253D1%25252526filename%2525253Dsetup.py%25252526action%2525253DdownloadFile%25252526fileId%2525253D42%252526mode%25253Dpage%26mode%3Dopener', 580, 400)" id="bx_auth_href_LiveIDOAuth" href="javascript:void(0)">
+			<span class="social-auth-btn-logo social-auth-btn-logo-liveid"></span>
+		</a>
+	</div>
+	<div class="social-auth-btn-container">
+		<a class="social-auth-btn social-auth-btn-twitter" onclick="BX.util.popup('/bitrix/tools/oauth/twitter.php?check_key=0be09a93ae111af2879a7b11e13e7647&amp;backurl=%252Foauth%252Fauthorize%252F%253Fuser_lang%253Den%2526client_id%253Db24.5c4d87c0e40b82.54925792%2526redirect_uri%253Dhttps%25253A%25252F%25252Fb24-rejckj.bitrix24.com%25252Fdisk%25252FdownloadFile%25252F42%25252F%25253Fauth_service_id%25253DBitrix24Net%252526ncc%25253D1%252526filename%25253Dsetup.py%252526action%25253DdownloadFile%252526fileId%25253D42%2526scope%253Dauth%25252Cprofile%2526response_type%253Dcode%2526mode%253Dpage%2526state%253Dsite_id%25253Ds1%252526backurl%25253D%2525252Fdisk%2525252FdownloadFile%2525252F42%2525252F%2525253Fcheck_key%2525253Df9be6f531b3aa2c63badf6a11d09ad95%25252526ncc%2525253D1%25252526filename%2525253Dsetup.py%25252526action%2525253DdownloadFile%25252526fileId%2525253D42%252526mode%25253Dpage', 800, 450)" id="bx_auth_href_Twitter" href="javascript:void(0)">
+			<span class="social-auth-btn-logo social-auth-btn-logo-twitter"></span>
+		</a>
+	</div>
+	<div class="social-auth-btn-container">
+		<a href="#" class="social-auth-btn social-auth-btn-google-auth" id="bx_auth_href_GoogleOAuth" onclick="BX.util.popup('https://accounts.google.com/o/oauth2/auth?client_id=999824014651.apps.googleusercontent.com&amp;redirect_uri=https%3A%2F%2Fwww.bitrix24.net%2Fbitrix%2Ftools%2Foauth%2Fgoogle.php&amp;scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&amp;response_type=code&amp;access_type=offline&amp;state=provider%3DGoogleOAuth%26site_id%3Ds1%26backurl%3D%252Foauth%252Fauthorize%252F%253Fcheck_key%253D0be09a93ae111af2879a7b11e13e7647%2526user_lang%253Den%2526client_id%253Db24.5c4d87c0e40b82.54925792%2526redirect_uri%253Dhttps%25253A%25252F%25252Fb24-rejckj.bitrix24.com%25252Fdisk%25252FdownloadFile%25252F42%25252F%25253Fauth_service_id%25253DBitrix24Net%252526ncc%25253D1%252526filename%25253Dsetup.py%252526action%25253DdownloadFile%252526fileId%25253D42%2526scope%253Dauth%25252Cprofile%2526response_type%253Dcode%2526mode%253Dpage%2526state%253Dsite_id%25253Ds1%252526backurl%25253D%2525252Fdisk%2525252FdownloadFile%2525252F42%2525252F%2525253Fcheck_key%2525253Df9be6f531b3aa2c63badf6a11d09ad95%25252526ncc%2525253D1%25252526filename%2525253Dsetup.py%25252526action%2525253DdownloadFile%25252526fileId%2525253D42%252526mode%25253Dpage%26mode%3Dopener%26redirect_url%3D%252Foauth%252Fauthorize%252F%253Fuser_lang%253Den%2526client_id%253Db24.5c4d87c0e40b82.54925792%2526redirect_uri%253Dhttps%25253A%25252F%25252Fb24-rejckj.bitrix24.com%25252Fdisk%25252FdownloadFile%25252F42%25252F%25253Fauth_service_id%25253DBitrix24Net%252526ncc%25253D1%252526filename%25253Dsetup.py%252526action%25253DdownloadFile%252526fileId%25253D42%2526scope%253Dauth%25252Cprofile%2526response_type%253Dcode%2526mode%253Dpage%2526state%253Dsite_id%25253Ds1%252526backurl%25253D%2525252Fdisk%2525252FdownloadFile%2525252F42%2525252F%2525253Fcheck_key%2525253Df9be6f531b3aa2c63badf6a11d09ad95%25252526ncc%2525253D1%25252526filename%2525253Dsetup.py%25252526action%2525253DdownloadFile%25252526fileId%2525253D42%252526mode%25253Dpage', 580, 400)">
+			<span class="social-auth-btn-logo social-auth-btn-logo-google-auth"></span>
+			<span class="social-auth-btn-text social-auth-btn-text-google-auth">Google</span>
+			<span style="clear: both;"></span>
+		</a>
+	</div>
+</div>
+
+
+
+<div style="clear: both;"></div>
+			</div><!--//form_group inline b_6 fln m0a-->
+
+			<div style="clear: both;"></div>
+			<div class="b_4 tar"><br></div>
+			<div style="clear: both;"></div>
+
+<form name="form_auth" id="form_auth" class="form" method="post" target="_top" action="/auth/">
+	<input type="hidden" name="AUTH_FORM" value="Y" />
+	<input type="hidden" name="TYPE" value="AUTH" />
+			<input type="hidden" name="backurl" value="/oauth/authorize/?user_lang=en&amp;client_id=b24.5c4d87c0e40b82.54925792&amp;redirect_uri=https%3A%2F%2Fb24-rejckj.bitrix24.com%2Fdisk%2FdownloadFile%2F42%2F%3Fauth_service_id%3DBitrix24Net%26ncc%3D1%26filename%3Dsetup.py%26action%3DdownloadFile%26fileId%3D42&amp;scope=auth%2Cprofile&amp;response_type=code&amp;mode=page&amp;state=site_id%3Ds1%26backurl%3D%252Fdisk%252FdownloadFile%252F42%252F%253Fcheck_key%253Df9be6f531b3aa2c63badf6a11d09ad95%2526ncc%253D1%2526filename%253Dsetup.py%2526action%253DdownloadFile%2526fileId%253D42%26mode%3Dpage" />
+		
+	<div class="form_group big b_9 fln mia" >
+		<input class="form_control w100p ffg clb" type="text" name="USER_LOGIN" value="" maxlength="255" placeholder="E-mail"/>
+	</div>
+	<div class="form_group big b_9 fln mia">
+		<input class="form_control w100p ffg clb" type="password" name="USER_PASSWORD" maxlength="255" placeholder="Password"/>
+	</div>
+
+						<div class="form_group medium inline b_9 fln mia">
+				<div class="checkreg b_12 ">
+					<input type="checkbox" id="USER_REMEMBER" name="USER_REMEMBER" value="Y" checked="checked"/>
+					<label for="USER_REMEMBER" class="custon_style"></label>
+					<label class="" for="USER_REMEMBER">Remember me</label>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+		
+		
+		<div class="form_group inline tal b_9 fln mia">
+			<div class="form_group inline b_12" style="margin-bottom: 0;">
+				<input type="submit" class="bx-btn fll big bdr50 blue cm-padding" id="AUTH_SUBMIT" onclick="BX.addClass(this, 'wait');" value="LOG IN">
+				<div class="reg_link fll posr" style="bottom: -1px;margin-left: 20px;"><a href="/oauth/authorize/?forgot_password=yes&amp;user_lang=en&amp;client_id=b24.5c4d87c0e40b82.54925792&amp;redirect_uri=https%3A%2F%2Fb24-rejckj.bitrix24.com%2Fdisk%2FdownloadFile%2F42%2F%3Fauth_service_id%3DBitrix24Net%26ncc%3D1%26filename%3Dsetup.py%26action%3DdownloadFile%26fileId%3D42&amp;scope=auth%2Cprofile&amp;response_type=code&amp;mode=page&amp;state=site_id%3Ds1%26backurl%3D%252Fdisk%252FdownloadFile%252F42%252F%253Fcheck_key%253Df9be6f531b3aa2c63badf6a11d09ad95%2526ncc%253D1%2526filename%253Dsetup.py%2526action%253DdownloadFile%2526fileId%253D42%26mode%3Dpage">Forgot your password?</a></div>
+			</div>
+		</div>
+	
+	<div style="clear: both;"></div>
+</form>
+<script>
+	BX.ready(function(){
+		var loginInput = document.forms.form_auth.USER_LOGIN;
+		if(loginInput)
+		{
+			if(loginInput.value.length <= 0)
+			{
+				BX.focus(loginInput);
+			}
+			else
+			{
+				BX.focus(document.forms.form_auth.USER_PASSWORD);
+			}
+		}
+	});
+</script>
+
+		</div><!-- // login_block_page-->
+	</div> <!-- //m0a workarea reg -->
+
+<script type="text/javascript">
+
+	function fireEnterKey(event)
+	{
+		event = event || window.event;
+		if (event.keyCode != 13)
+			return true;
+
+		var src = event.srcElement || event.target;
+		if (!src || (src.tagName.toLowerCase() != "textarea"))
+		{
+			var form = document.forms["form_auth"];
+			if (form)
+			{
+				var password = form.elements["USER_PASSWORD"];
+				if (!password || BX.type.isNotEmptyString(password.value))
+					form.submit();
+			}
+
+			BX.PreventDefault(event);
+		}
+
+		return true;
+	}
+
+</script>
+					<div class="footer container home tac">
+				&copy; 2001-2019 Bitrix, Inc. Powered by Bitrix Site Manager.			</div>
+		</div> <!-- //ovh -->
+			</div> <!-- //wrap -->
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter25111037 = new Ya.Metrika({id:25111037,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/25111037" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter --><script type="text/javascript">
+	BX.ready(function(){
+		var lang_toggle = BX('b24net_lang_block');
+		BX.bind(BX('b24net_lang_block'), 'click', function(){
+			BX.PopupMenu.show('lang-popup', lang_toggle, [
+					{text : "English", className : "icon lng_en", onclick : function() { BX.B24Network.changeLanguage('en'); }},
+					{text : "Deutsch", className : "icon lng_de", onclick : function() { BX.B24Network.changeLanguage('de'); }},
+					{text : "Español", className : "icon lng_la", onclick : function() { BX.B24Network.changeLanguage('la'); }},
+					{text : "Português (Brasileiro)", className : "icon lng_br", onclick : function() { BX.B24Network.changeLanguage('br'); }},
+					{text : "Français", className : "icon lng_fr", onclick : function() { BX.B24Network.changeLanguage('fr'); }},
+					{text : "Italiano", className : "icon lng_it", onclick : function() { BX.B24Network.changeLanguage('it'); }},
+					{text : "Polski", className : "icon lng_pl", onclick : function() { BX.B24Network.changeLanguage('pl'); }},
+					{text : "Русский", className : "icon lng_ru", onclick : function() { BX.B24Network.changeLanguage('ru'); }},
+					{text : "Українська", className : "icon lng_ua", onclick : function() { BX.B24Network.changeLanguage('ua'); }},
+					{text : "Türkçe, beta", className : "icon lng_tr", onclick : function() { BX.B24Network.changeLanguage('tr'); }},
+					{text : "中文（简体）", className : "icon lng_sc", onclick : function() { BX.B24Network.changeLanguage('sc'); }},
+					{text : "中文（繁體）", className : "icon lng_tc", onclick : function() { BX.B24Network.changeLanguage('tc'); }},
+					{text : "日本語", className : "icon lng_ja", onclick : function() { BX.B24Network.changeLanguage('ja'); }},
+					{text : "Tiếng Việt", className : "icon lng_vn", onclick : function() { BX.B24Network.changeLanguage('vn'); }},
+					{text : "Bahasa Indonesia", className : "icon lng_id", onclick : function() { BX.B24Network.changeLanguage('id'); }},
+					{text : "Bahasa Melayu", className : "icon lng_ms", onclick : function() { BX.B24Network.changeLanguage('ms'); }},
+					{text : "ภาษาไทย", className : "icon lng_th", onclick : function() { BX.B24Network.changeLanguage('th'); }},
+					{text : "हिन्दी", className : "icon lng_hi", onclick : function() { BX.B24Network.changeLanguage('hi'); }},
+				],
+				{
+					offsetTop:10,
+					offsetLeft:0,
+					angle: { offset: 45 }
+				}
+			);
+			BX.addClass(BX("menu-popup-lang-popup"), "lng_container");
+		})
+	});
+</script>
+<div id="mobile_popup" style="display: none;">
+	<div class="bx-invite-text">
+	Register with <strong>b24-rejckj.bitrix24.com</strong> using Bitrix24 mobile app or continue registration here.	</div>
+	<div class="bx-invite-btns">
+		<div id="mobile_popup_buttons_ios" style="display: none;">
+			<a href="bitrix24join://?domain=b24-rejckj.bitrix24.com&amp;client_id=b24.5c4d87c0e40b82.54925792&amp;authorize=yes" class="bx-invite-btn first">Yes, I have the app</a>
+			<a href="https://itunes.apple.com/en/app/id561683423" class="bx-invite-btn">No, I don't have the app but want to install it now</a>
+		</div>
+		<div id="mobile_popup_buttons_android" style="display: none;">
+			<a href="intent://?domain=b24-rejckj.bitrix24.com&amp;client_id=b24.5c4d87c0e40b82.54925792&amp;authorize=yes#Intent;scheme=bitrix24join;package=com.bitrix24.android;end" class="bx-invite-btn first" style="">Open the app</a>
+		</div>
+		<span onclick="closeMobilePopup()" class="bx-invite-link">Continue registration in the browser</span>
+	</div>
+</div>
+<script type="text/javascript">
+if((BX.browser.IsIOS() || BX.browser.IsAndroid()) && (!/windows\sphone/i.test(navigator.userAgent)))
+{
+	BX.ready(window.showMobilePopup);
+}
+</script></body>
+</html>

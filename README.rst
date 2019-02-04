@@ -1,4 +1,9 @@
-﻿include:
+﻿.. |pypi| image:: https://img.shields.io/pypi/v/progress.svg
+   :target: https://pypi.org/project/progress/
+.. |demo| image:: https://raw.github.com/verigak/progress/master/demo.gif
+   :alt: Demo
+
+include:
 
     introduction
     
@@ -57,8 +62,12 @@ loading_bars:
 Easy progress reporting for Python
 ==================================
 
+
+
+
 |pypi|
 
+|demo|
 
 
 Bars

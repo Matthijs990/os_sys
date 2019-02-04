@@ -3,11 +3,8 @@ import socket
 import socket as s
 from time import *
 import time as _time
-import fail as f
-__all__ = ['info', 'is_connected', 'ping', 'connect_time', 'internet', 'chek_speed', 'internet_and_speed', 'cmd_ping', 'cmd', 'ping_data', 'filter_regel']
 
 def info():
-    
     '''this is a lib where you can chek or test your wifi if you need commands:
     is_connected() = looks for you of your wifi is connected
     sub() = pings your wifi 8 times and returns the results

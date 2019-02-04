@@ -1,0 +1,24 @@
+type=lib
+modules=[pack, os_sys]
+set_var:index#0
+set_piont:modules_index
+if index<=<*(len({[modules]})) with __num__ as num:
+	set_point:module=num@update_var_class
+	(re_)set:mod=modules[index]
+	set_var:gindex=num#0@update_var_class
+	if gindex<=<(len({[modules[0]]})):
+		modules.append(modules[index]+'.'search(in(location(this{from(setup.py)[file[gindex]}))))
+		gindex.one
+		goto module
+	else:
+		goto modules_index
+@save
+@method
+@os
+@system
+if admin or lock:
+	@admin
+	@lock
+	@give_admin
+	@unlock
+save()

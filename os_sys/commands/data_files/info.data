@@ -1,0 +1,5 @@
+name=os_sys
+version=get_version
+needing_py=3>=
+py_version=get_version
+info=in{egg_info{type=[map(in{dict{site_packages}})]}}

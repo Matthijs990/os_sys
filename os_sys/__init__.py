@@ -1,1618 +1,454 @@
-from os_sys import __all__ as os_sys_
-from wifi import __all__ as wifi_
-from system import __all__ as system_
-__all__ = ['os_sys', 'system', 'wifi']
-print(__all__)
-print(os_sys_)
-print('')
-print(system_)
-print('')
-print(wifi_)
-from subprocess import *
-from time import *
-def cmd(command):
-        return getstatusoutput(command)
+
 import os
 import sys
-import subprocess as sub
 
-__all_names__ = ['main_dir', 'get_import_list', 'get_user', 'cmd', 'info', 'win_version', 'cmd_filter_haak', 'filter_regel', 'cmd_out_list',
-           'cmd_out', 'ColorPrint', 'print_fail', 'print_pass', 'print_warn',
-                                                                   'print_info', 'print_bold',
-           'info', 'is_connected', 'ping', 'connect_time', 'internet',
+
+__all__ = ['os_sys', 'fail', 'modules', 'system', 'wifi', 'programs', 'test', 'code', 'decode', 'discription', '_code', 'more_input', 'all_dict', 'download',
+           'obj_type', 'object_type', 'show_progress', 'update_progress', 'progress_bar_loading', 'tqdm', 'progress_types', 'bar', 'tqdm_gui', 'gui_bar']
+__fail__ = ['warn_return', 'make_warn', 'print_warn', 'warn_msg', 'warning_msg', 'warn_file_no', 'msg', 'module_warn', 'text_warn']
+__os_sys__ = ['main_dir', 'get_import_list', 'get_user', 'cmd', 'info', 'win_version', 'cmd_filter_haak', 'filter_regel', 'cmd_out_list',
+           'cmd_out', 'ColorPrint', 'info', 'is_connected', 'ping', 'connect_time', 'internet',
            'chek_speed', 'internet_and_speed', 'cmd_ping', 'cmd',
-           'ping_data', 'replace', 'open_site'
+           'ping_data', 'replace', 'open_site', 'explorer_dict', 'explorer',
            'is_even', 'is_oneven', 'fahr_to_celsius', 'celsius_to_kelvin', 'fahr_to_kelvin', 'convert_c_to_f'
            ]
-__all__ = __all_names__
-main_dir = os.path.split(os.path.abspath(__file__))[0]
-def get_import_list(module):
-    get_list = list(module.__all__)
-    return get_list
-def get_user():
-    import getpass
-    return getpass.getuser()
+__all_names__ = __os_sys__
+fail_ = __fail__
+__all = []
+os_sys_ = __all_names__
+index = 0
+os_all = []
+while index < len(os_sys_):
+    __all.append(''.join('os_sys.' + os_sys_[index]))
+    index += 1
+index = 0
 
+index = 0
+fail_all = []
+while index < len(fail_):
+    __all.append(''.join('fail.' + fail_[index]))
+    index += 1
+
+def _code(txt):
+    b = txt
+    d = {}
+    for c in (65, 97):
+        for i in range(26):
+            d[chr(i+c)] = chr((i+13) % 26 + c)
+
+    data = "".join([d.get(c, c) for c in b])
+    
+    return data
+import requests
+def download(url, file, path=None):
+    url = url  
+    r = requests.get(url)
+    
+    print('downloading:')
+    import os
+    filepath = os.path.join(path, file) if not file and path == None else os.path.join(os.path.abspath(''), file)
+    with open(str(filepath), 'wb') as f:  
+        f.write(r.content)
+def os_sys_lib():
+    from distutils.sysconfig import get_python_lib as gpl
+    path = os.path.join(str(gpl()), 'os_sys')
+    return path
+def more_input():
+    init = input()
+    mystr = str()
+    while not init == 'None':
+        mystr = mystr + (str(init)) + '\n'
+        init = input()
+    
+    return mystr
+
+def print_all_dirs(start_dir, except_dir):
+    for dirname, dirnames, filenames in os.walk(start_dir):
+        # print path to all subdirectories first.
+        for subdirname in dirnames:
+            print(os.path.join(dirname, subdirname))
+
+        # print path to all filenames.
+        for filename in filenames:
+            print(os.path.join(dirname, filename))
+
+        # Advanced usage:
+        # editing the 'dirnames' list will stop os.walk() from recursing into there.
+        if except_dir in dirnames:
+            # don't go into any .git directories.
+            dirnames.remove(except_dir)
+class cmd_parser:
+    import argparse
+    exeple = '''
+    def main():
+        ''\' Example of taking inputs for megazord bin''\'
+        parser = argparse.ArgumentParser(prog='my_megazord_program')
+        parser.add_argument('-i', nargs='?', help='help for -i blah')
+        parser.add_argument('-d', nargs='?', help='help for -d blah')
+        parser.add_argument('-v', nargs='?', help='help for -v blah')
+        parser.add_argument('-w', nargs='?', help='help for -w blah')
+
+        args = parser.parse_args()
+
+        collected_inputs = {'i': args.i,
+                        'd': args.d,
+                        'v': args.v,
+                        'w': args.w}
+        print 'got input: ', collected_inputs
+import argparse
+
+def main():
+    \''' Example of taking inputs for megazord bin''\'
+    parser = argparse.ArgumentParser(prog='my_megazord_program')
+    parser.add_argument('-i', nargs='?', help='help for -i blah')
+    parser.add_argument('-d', nargs='?', help='help for -d blah')
+    parser.add_argument('-v', nargs='?', help='help for -v blah')
+    parser.add_argument('-w', nargs='?', help='help for -w blah')
+
+    args = parser.parse_args()
+
+    collected_inputs = {'i': args.i,
+                    'd': args.d,
+                    'v': args.v,
+                    'w': args.w}
+    print 'got input: ', collected_inputs
+
+
+
+    '''
+    
+def make_text(file):
+    try:
+        fh = open(str(file) + '.lib', mode='r', encoding='utf-8')
+    except Exception:
+        data = ''
+        pass
+    else:
+        data = _code(fh.read())
+        fh.close()
+        print(data)
+    fh = open(str(file) + '.lib', mode='w', encoding='utf-8')
+    fh.write(str(_code(str(data + more_input()))))
+    fh.close()
+def object_type(obj):
+    m = type(obj)
+    t = m
+    m = str(t).replace('<class \'', '')
+    t = m
+    m = str(t).replace('\'>', '')
+    return m
+obj_type = object_type
+from tqdm import tqdm_gui as gui_bar
+from tqdm import tqdm_gui
+
+def all_dict(dictory, exceptions=None, file_types=None, maps=True, files=False, print_data=False):
+    import os
+    data = []
+    string_data = ''
+    e = exceptions
+    if 'list' in str(type(e)) or e == None:
+        pass
+    else:
+        raise TypeError('expected a list but got a %s' % type(e))
+    e = file_types
+    if 'list' in str(type(e)) or e == None:
+        pass
+    else:
+        raise TypeError('expected a list but got a %s' % type(e))
+    
+    print_ = True if print_data == 'print' or print or True else False
+    
+    for dirname, dirnames, filenames in os.walk(dictory):
+        # print path to all subdirectories first.
+        if maps:
+            for subdirname in dirnames:
+                dat = os.path.join(dirname, subdirname)
+                data.append(dat)
+                string_data = string_data + '\n' + dat
+                if print_:
+                    print(dat)
+
+        # print path to all filenames.
+        if files:
+            for filename in filenames:
+                s = False
+                fname_path = filename
+                file = fname.split('.')
+                no = int(len(file) - 1)
+                file_type = file[no]
+                if not e == None:
+                    for b in range(0, len(e)):
+                        if e[b] == file_type:
+                            s = True
+                            
+                if e == None:
+                    s = True
+                if s:
+                    s = False   
+                            
+                    dat = os.path.join(dirname, filename)
+                    data.append(dat)
+                    string_data = string_data + '\n' + dat
+                    if print_:
+                        
+                        print(dat)
+        
+
+        # Advanced usage:
+        # editing the 'dirnames' list will stop os.walk() from recursing into there.
+        if not exceptions == None:
+            
+            for ip in range(0, int(len(exceptions))):
+                exception = exceptions[ip]
+                
+                if exception in dirnames:
+                    # don't go into any .git directories.
+                    dirnames.remove(exception)
+    
+    return [data, string_data]
 import os
-import sys
+import time
+def show_progres():
+    import time, sys
+    from tqdm import tqdm
+    for i in tqdm(range(10)):
+         time.sleep(1)
+import time, sys
 
-from subprocess import *
-import socket
-import socket as s
-from time import *
-import time as _time
-import tkinter, time, subprocess as sub, subprocess
+# update_progress() : Displays or updates a console progress bar
+## Accepts a float between 0 and 1. Any int will be converted to a float.
+## A value under 0 represents a 'halt'.
+## A value at 1 or bigger represents 100%
+def update_progress(progress):
+    barLength = 10 # Modify this to change the length of the progress bar
+    status = ""
+    if isinstance(progress, int):
+        progress = float(progress)
+    if not isinstance(progress, float):
+        progress = 0
+        status = "error: progress var must be float\r\n"
+    if progress < 0:
+        progress = 0
+        status = "Halt...\r\n"
+    if progress >= 1:
+        progress = 1
+        status = "Done...\r\n"
+    block = int(round(barLength*progress))
+    text = "\rPercent: [{0}] {1}% {2}".format( "#"*block + "-"*(barLength-block), progress*100, status)
+    sys.stdout.write(text + '\n')
+    sys.stdout.flush()
+def test():
+    # update_progress test script
+    print("progress : 'hello'")
+    update_progress("hello")
+    
 
+    print("progress : 3")
+    update_progress(3)
+    
 
-working = True
-def w():
-    global working
-    working = True
-def ww():
-    global working
-    working = False
-def cmd(command):
-    return getstatusoutput(command)
+    print("progress : [23]")
+    update_progress([23])
+    
+    print("")
+    print("progress : -10")
+    update_progress(-10)
+    
 
-def info(function):
-    
-    
-    
-    print(dir(function))
-    print(help(function))
-def info_o(function):
-    
-    import turtle as t
-    import turtle
-    
-    print(dir(function))
-    print(help(function))
-def win_version():
-    import sys
-    is_windows = hasattr(sys, 'getwindowsversion')
-    return is_windows
-def cmd_filter_haak(op):
-    net = cmd(op)
-    
-    net_bericht = str(net)
-    if '[' in net_bericht:
-        haak = '['
-        haak2 = ']'
-    elif '{' in net_bericht:
-        haak = '{'
-        haak2 = '}'
-    elif '(' in net_bericht:
-        haak = '('
-        haak2 = ')'
-    else:
-        print('not a cmd output to filter')
-        raise ValueError('geen haken gevonden om op te filteren')
-    berijk = range(0, len(net_bericht))
-    go = False
-    now = False
-    message = ''
-    for i in berijk:
+    print("")
+    print("progress : 10")
+    update_progress(10)
+   
+
+    print("")
+    print("progress : 0->1")
+    for i in range(100):
         
-        if net_bericht[i] == haak or go == True or now == True:
-            if go == True:
-                if not net_bericht[i] == haak2:
-                    message += net_bericht[i]
-            go = True
-            if net_bericht[i] == haak2:
-                go = False
-                if haak in net_bericht or not haak in net_bericht:
-                    now = True
-                    go = False
-                    if '[' in net_bericht:
-                        haak = '['
-                        haak2 = ']'
-                    elif '{' in net_bericht:
-                        haak = '{'
-                        haak2 = '}'
-                    elif '(' in net_bericht:
-                        haak = '('
-                        haak2 = ')'
-                    else:
-                        go = False
-                        break
-                    continue
-    return message
-cmd_filter_haak('ping')
-def filter_zin(zine):
-    zin = ''
-    into = ''
-    f = 0
-    lrn = str(zine)
-    print(lrn)
-    berijk = range(0, len(lrn))
-    for i in berijk:
-        if i < int(len(lrn) - 1):
-            into = into + lrn[int(i)] + lrn[int(i + 1)]
-        else: continue
-        if '\n' in into:
-            zin = zin + into + '\n'
-            print(zin)
-            into = ''
-    return zin
-def filter_regel(zinig):
-    if not zinig == str:
-        zinig = str(zinig)
-    OUTPUT = zinig
-    if '0, ' in OUTPUT:
-        OUTPUT = OUTPUT.replace('0, ', '')
-    
-    OUTPUT = OUTPUT.replace('(\'', '')
-    OUTPUT = OUTPUT.replace('\')', '')
-    formatted_output = OUTPUT.replace('\\n', '\n')
-    return formatted_output
-def data():
-    return cmd('ping -n 10 -l 1000 8.8.8.8')    
-def cmd_out_list(command_or_data):
-    try:
-        e = filter_regel(cmd(command_or_data))
-        li = str(cmd(command_or_data)).split(sep='\\n')
-    except TypeError:
-        try:
-            e = filter_regel(command_or_data)
-            li = str(command_or_data).split(sep='\\n')
-        except Exception as ex:
-            print('a error raised')
-            raise ex('error')
-    return [e, li]
-def cmd_out(command_or_data):
-    try:
-        e = filter_regel(cmd(command_or_data))
-        li = str(cmd(command_or_data)).split(sep='\\n')
-    except TypeError:
-        try:
-            e = filter_regel(command_or_data)
-            li = str(command_or_data).split(sep='\\n')
-        except Exception as ex:
-            print('a error raised')
-            raise ex('error')
-    return e
+        update_progress(i/100.0)
+
+    print("")
+    print("Test completed")
 import sys
+import time
+import threading
+stop = False
+kill = False
+class progress_bar_loading(threading.Thread):
+    __all__ = ['run', 'kill']
+    def run(self):
+            global stop
+            global kill
+            print('Loading....  ')
+            sys.stdout.flush()
+            i = 0
+            while stop != True:
+                    if (i%4) == 0: 
+                        sys.stdout.write('\b')
+                    elif (i%4) == 1: 
+                        sys.stdout.write('\b')
+                    elif (i%4) == 2: 
+                        sys.stdout.write('\b')
+                    elif (i%4) == 3: 
+                        sys.stdout.write('\b')
 
-# Colored printing functions for strings that use universal ANSI escape sequences.
-# fail: bold red, pass: bold green, warn: bold yellow, 
-# info: bold blue, bold: bold white
+                    sys.stdout.flush()
+                    time.sleep(0.2)
+                    i+=1
 
-class ColorPrint:
+            if kill:
+                print('\b\b\b\b ABORT!')
+            else: 
+                print('\b\b done!')
+    def kill(self):
+        global kill
+        global stop
+        kill = True
+        stop = True
 
-    @staticmethod
-    def print_fail(message, end = '\n'):
-        sys.stderr.write(message.strip())
+kill = False
+import threading
+from threading import Thread
+run_background = threading.Thread
+run_apart = threading.Thread
+from tqdm import tqdm as _t_q_d_m_
+class tqdm_loop(Thread):
+    global kill
+    '''
+tqdm help
+  """
+  Decorate an iterable object, returning an iterator which acts exactly
+  like the original iterable, but prints a dynamically updating
+  progressbar every time a value is requested.
+  """
 
-    @staticmethod
-    def print_pass(message, end = '\n'):
-        sys.stdout.write(message.strip())
+  def __init__(self, iterable=None, desc=None, total=None, leave=True,
+               file=None, ncols=None, mininterval=0.1,
+               maxinterval=10.0, miniters=None, ascii=None, disable=False,
+               unit='it', unit_scale=False, dynamic_ncols=False,
+               smoothing=0.3, bar_format=None, initial=0, position=None,
+               postfix=None, unit_divisor=1000):
+               '''
+    __all__ = ['run']
+    def __init__(self, _range, sleep):
+        self.u = _range
+        self.sleep_time = sleep
+    def run(self):
+        loop = True
+        if loop:
+            for i in _t_q_d_m_(self.u):
+                from time import sleep
+                sleep(self.sleep_time)
+                if kill:
+                    break
+            return
+    
+        
+class tqdm(Thread):
+    
+    '''
+tqdm help
+  """
+  Decorate an iterable object, returning an iterator which acts exactly
+  like the original iterable, but prints a dynamically updating
+  progressbar every time a value is requested.
+  """
 
-    @staticmethod
-    def print_warn(message, end = '\n'):
-        sys.stderr.write(message.strip())
+  def __init__(self, iterable=None, desc=None, total=None, leave=True,
+               file=None, ncols=None, mininterval=0.1,
+               maxinterval=10.0, miniters=None, ascii=None, disable=False,
+               unit='it', unit_scale=False, dynamic_ncols=False,
+               smoothing=0.3, bar_format=None, initial=0, position=None,
+               postfix=None, unit_divisor=1000 total=100):
+               '''
+    __all__ = ['run']
+    def __init__(self, args):
+        self.args = args
+        self.args[total] = 100 if total not in args else args[total]
+        self.sleep_time = args[sleep] if sleep in args else 0.1
+        bar = tqdm(self.args)
+    def update(self, n=1):
+        bar.update(n)
+    def run(self, between):
+        for i in tqdm(range(self.args[total]), self.args):
+            import time
+            time.sleep(between)
+    def close():
+        bar.close()
+bar = progress_bar_loading()
 
-    @staticmethod
-    def print_info(message, end = '\n'):
-        sys.stdout.write(message.strip())
 
-    @staticmethod
-    def print_bold(message, end = '\n'):
-        sys.stdout.write(message.strip())
+
 if __name__ == '__main__':
+    test()
+try:
+    from . import fail, modules, system, wifi, programs, test, os_sys, errors, discription, progress_bars, _progress as progress
+except ImportError:
+    pass
+    try:
+        from os_sys import fail, modules, system, wifi, programs, test, os_sys, errors, discription, progress_bars, _progress as progress
+    except Exception:
+        pass
+        import fail, modules, system, wifi, programs, test, os_sys, errors, discription, progress_bars, _progress as progress
+        
+fail = fail
+modules = modules
+system = system
+wifi = wifi
+programs = programs
+test = test
+os_sys = os_sys
+errors = errors
+discription = discription
+decode = discription
+code = discription
+progress_bar = progress_bars
+progres_bar = progress_bars
+progress = progress
+progres = progress
+def bar(rn, fill='.'):
     import time
-    start = time.time()
-    try:
-        cmd('arp -a')
-    except Exception as ex:
-        print_warn(ex)
-        working = False
-        pass
-    stop = time.time()
-    re = stop - start
-    if working == True:
-        print('func cmd(arp -a) state: working.\nwifi: True\nping module importable: True\ntime to compleet func: ' + str(re))
-    start = time.time()
-    
-    try:
-        win_version()
-    except Exception as ex:
-        print_warn(ex)
-        working = False
-        pass
-    stop = time.time()
-    re = stop - start
-    if working == True:
-        print('func win_version state: working.\nwin_version module importable: True\ntime to compleet func: ' + str(re))
-    start = time.time()
-    w()
-    try:
-        cmd_filter_haak('arp -a')
-    except Exception as ex:
-        print_warn(ex)
-        ww()
-        pass
-    stop = time.time()
-    re = stop - start
-    if working == True:
-        print('func cmd_filter_haak(arp -a) state: working.\nwifi: True\nfilter_haak module importable: True\ntime to compleet func: ' + str(re))
-    w()
-    try:
-        filter_regel('arp -a')
-    except Exception as ex:
-        print_warn(ex)
-        ww()
-        pass
-    stop = time.time()
-    re = stop - start
-    if working == True:
-        print('func filter_regel(arp -a) state: working.\nwifi: True\nfilter_regel module importable: True\ntime to compleet func: ' + str(re))
-    w()
-    try:
-        cmd_out_list('arp -a')
-    except Exception as ex:
-        print_warn(ex)
-        ww()
-        pass
-    stop = time.time()
-    re = stop - start
-    if working == True:
-        print('func cmd_out_list(arp -a) state: working.\nwifi: True\ncmd_out_list module importable: True\ntime to compleet func: ' + str(re))
-    w()
-    try:
-        cmd_out('arp -a')
-    except Exception as ex:
-        print_warn(ex)
-        ww()
-        pass
-    stop = time.time()
-    re = stop - start
-    if working == True:
-        print('func cmd_out(arp -a) state: working.\nwifi: True\ncmd_out module importable: True\ntime to compleet func: ' + str(re))
-    w()
-    import getpass
-    print(getpass.getuser())
 
-main_dir = os.path.split(os.path.abspath(__file__))[0]
-def internet(host="8.8.8.8", port=53, timeout=3):
-    """
-    Host: 8.8.8.8 (google-public-dns-a.google.com)
-    OpenPort: 53/tcp
-    Service: domain (DNS/TCP)
-    """
-    try:
-        socket.setdefaulttimeout(timeout)
-        socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
-        return True
-    except Exception as ex:
-        print(ex)
-        return False
-def chek_speed():
-        '''voer de functie internet uit en vergelijk de tijd voor en na om te kijken welke vergelijking is'''
-        start = time()
-        internet()
-        eind = time()
-        tijd = eind - start
-        
-        
-        return tijd
-from subprocess import *
-import socket
-import socket as s
-from time import *
-import time as _time
-def info():
-    '''this is a lib where you can chek or test your wifi if you need commands:
-    is_connected() = looks for you of your wifi is connected
-    sub() = pings your wifi 8 times and returns the results
-    ping() = pings your wifi one time to chek your connection
-    connect_time() = looks how fast your wifi connects
-    internet() = returns True if you have wifi and False if not
-    chek_speed() = looks how vast the wifi reponse on a opening of google.com
-    internet_and_speed() = chek of you have wifi and how fast
-    cmd_ping() = pings your wifi one time
-    cmd(command) = type a command that cmd need to do
-    ping_data(times, task) = returns all ping data times for how many times and if task is print he prints all results and always he returns the data
-    ping_data return list max_time, min_time, middel, totaal, procent, n_procent, aantal, int(aantal - faal), tt
-    not all of this will work on a apple or linux pc
-    all tings work only on windows'''
-    help_data = '''this is a lib where you can chek or test your wifi if you need commands:
-is_connected() = looks for you of your wifi is connected
-sub() = pings your wifi 8 times and returns the results
-ping() = pings your wifi one time to chek your connection
-connect_time() = looks how fast your wifi connects
-internet() = returns True if you have wifi and False if not
-chek_speed() = looks how vast the wifi reponse on a opening of google.com
-internet_and_speed() = chek of you have wifi and how fast
-cmd_ping() = pings your wifi one time
-cmd(command) = type a command that cmd need to do
-ping_data(times, task) = returns all ping data times for how many times and if task is print he prints all results and always he returns the data
-ping_data return list max_time, min_time, middel, totaal, procent, n_procent, aantal, int(aantal - faal), tt
-not all of this will work on a apple or linux pc
-all tings work only on windows'''
-    return help_data
-def is_connected(hostname = "www.google.com"):
-  try:
-    # see if we can resolve the host name -- tells us if there is
-    # a DNS listening
-    host = socket.gethostbyname(hostname)
-    # connect to the host -- tells us if the host is actually
-    # reachable
-    s = socket.create_connection((host, 80), 2)
-    return True
-  except:
-     pass
-     return False
 
-import subprocess
-def sub():
-    al = subprocess.call('ping -n 8 -l 1000 8.8.8.8')
-    
-    return al
-from platform   import system as system_name  # Returns the system/OS name
-from subprocess import call   as system_call  # Execute a shell command
 
-def ping(host='8.8.8.8'):
-    """
-    Returns True if host (str) responds to a ping request.
-    Remember that a host may not respond to a ping (ICMP) request even if the host name is valid.
-    """
-
-    # Ping command count option as function of OS
-    param = '-n' if system_name().lower()=='windows' else '-c'
-
-    # Building the command. Ex: "ping -c 1 google.com"
-    command = ['ping', param, '1', host]
-
-    # Pinging
-    return system_call(command) == 0
-
-#import time
-...
-def connect_time():
-  try:
-    # see if we can resolve the host name -- tells us if there is
-    # a DNS listening
-    host = socket.gethostbyname('google.com')
-    # connect to the host -- tells us if the host is actually
-    # reachable
-    before = _time.time()      # from Python 3.3 and above use before = time.perf_counter()
-    s = socket.create_connection((host, 80), 2)
-    after = _time.time()      # from Python 3.3 and above use after = time.perf_counter()
-    return after - before
-  except:
-    return -1
-def internet(host="8.8.8.8", port=53, timeout=3):
-    """
-    Host: 8.8.8.8 (google-public-dns-a.google.com)
-    OpenPort: 53/tcp
-    Service: domain (DNS/TCP)
-    """
-    try:
-        socket.setdefaulttimeout(timeout)
-        socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
-        return True
-    except Exception as ex:
-        print(ex)
-        return False
-def chek_speed():
-        '''voer de functie internet uit en vergelijk de tijd voor en na om te kijken welke vergelijking is'''
-        start = time()
-        internet()
-        eind = time()
-        tijd = eind - start
-        start = time()
-        ping()
-        eind = time()
-        tijd =  eind - start
-        
-        
-        return tijd
-def internet_and_speed():
-    return str(internet()) + ' time to ping 32 bytes of data ' + str(chek_speed())
-
-def cmd_ping():
-    global get_it
-    global get_in
-    get_it = True
-    if internet() == True:
-        try:
-            get_in = getstatusoutput('ping -n 1 -l 1000 8.8.8.8')
-        except Exception as ex:
-            print(ex)
-            get_it = False
-            get_in = None
-    else:
-        get_in = None
-        get_it = False
-    return get_in
-def cmd(command):
-    return getstatusoutput(command)
-def ping_data(aantal, taak):
-    global get_it
-    global get_in
-    tt = list()
-    string = ''
-    totaal = 0
-    middel = 0
-    faal = 0
-    procent = 0
-    n_procent = 0
-    min_doen = 0
-    for i in range(aantal):
-        
-        restart = time()
-        cmd_ping()
-        re_end = time()
-        if get_it == False:
-            faal = faal + 1
-        if Exception:
-            
-            if not get_it == False:
-                faal = faal - 1
-        if not get_it == False:
-
-            re = re_end - restart
-            middel = middel + re
-            totaal = totaal + re
-            tt.append(re)
-            min_doen += 1
-    if middel > 0:
-        middel = middel / min_doen
-    
-    per = 100 / aantal
-    
-    if faal > 0:
-        min_p = faal * per
-        
-        
-        procent = 100 - min_p
-        n_procent = min_p
-    else:
-        procent += 100
-        faal = 0
-    try:
-        max_time = max(tt)
-        min_time = min(tt)
-    except ValueError:
-        max_time = None
-        min_time = None
-    if taak.lower() == 'print':
-        if procent > 0:
-            print('all the ping times: ' + str(tt))
-            print('max time to ping with 1000 bytes of data: ' + str(max_time))
-            print('and the min time: ' + str(min_time))
-            print('and the average time: ' + str(middel))
-            print('and the total time to ping ' + str(aantal) + ' times: ' + str(totaal))
-        print('number of sent packages: ' + str(aantal))
-        print('number of received packages: ' + str(aantal - faal))
-        print('percentage that has not been lost: ' + str(procent) + '%')
-        print('percentage that has been lost: ' + str(n_procent) + '%')
-    return [max_time, min_time, middel, totaal, procent, n_procent, aantal, int(aantal - faal), tt]
-
-def filter_regel(zinig):
-    if not zinig == str:
-        zinig = str(zinig)
-    OUTPUT = zinig
-    
-    
-    OUTPUT = OUTPUT.replace('(0, \'', '')
-    OUTPUT = OUTPUT.replace('\')', '')
-    formatted_output = OUTPUT.replace('\\n', '\n')
-    return formatted_output
-def data():
-    return cmd('ping -n 10 -l 1000 8.8.8.8')
-
-
-def replace(boodschap, een, twee):
-    
-    boodschap = boodschap.replace(een, twee)
-    return boodschap
-def open_site(url):
-    import webbrowser as w
-    w.open(url)
-
-def is_even(getal):
-    return getal % 2 == 0
-def is_oneven(getal):
-    if not getal % 2 == 0:
-        return True
-    else:
-        return False
-
-def plus(a, b):
-    c = a + b
-    return c
-
-def min_(a, b):
-    c = a - b
-    return c
-
-def keer(a, b):
-    c = a * b
-    return c
-
-def deel(a, b):
-    c = a / b
-    return c
-def maak_tegen(getal):
-    if getal < 0:
-        getal = abs(getal)
-        return getal
-    else:
-        deel = getal
-        deel = deel * 2
-        getal = getal - deel
-        return getal
-    
-
-def afstand(x1, y1, x2, y2):
-    if x1 or x2 < 0 or x1 and x2 < 0:
-        x = x1 - x2
-    elif x1 and x2 == 0:
-        x = 0
-    else:
-        x = x1 - x2
-    if y1 or y2 < 0 or y1 and y2 < 0:
-        y = y1 - y2
-    elif y1 and y2 == 0:
-        y = 0
-    else:
-        y = y1 - y2
-    return x, y
-def fahr_to_celsius(temp):
-    return ((temp * (5/9)) + 32)
-
-def celsius_to_kelvin(temp_c):
-    return temp_c + 273.15
-
-def fahr_to_kelvin(temp_f):
-    temp_c = fahr_to_celsius(temp_f)
-    temp_k = celsius_to_kelvin(temp_c)
-    return temp_k
-
-def convert_c_to_f(temp):
-    
-    c = (temp-32)*5/9
-    return [c, str(c)]
-
-
-
-
-
-
-
-
-
-class os_sys:
-    import os
-    import sys
-    import subprocess as sub
-
-    __all_names__ = ['main_dir', 'get_import_list', 'get_user', 'cmd', 'info', 'win_version', 'cmd_filter_haak', 'filter_regel', 'cmd_out_list',
-               'cmd_out', 'ColorPrint', 'print_fail', 'print_pass', 'print_warn',
-                                                                       'print_info', 'print_bold',
-               'info', 'is_connected', 'ping', 'connect_time', 'internet',
-               'chek_speed', 'internet_and_speed', 'cmd_ping', 'cmd',
-               'ping_data', 'replace', 'open_site'
-               'is_even', 'is_oneven', 'fahr_to_celsius', 'celsius_to_kelvin', 'fahr_to_kelvin', 'convert_c_to_f'
-               ]
-    __all__ = __all_names__
-    main_dir = os.path.split(os.path.abspath(__file__))[0]
-    def get_import_list(module):
-        get_list = list(module.__all__)
-        return get_list
-    def get_user():
-        import getpass
-        return getpass.getuser()
-
-    import os
-    import sys
-
-    
-    import socket
-    import socket as s
-    
-    import time as _time
-    import tkinter, time, subprocess as sub, subprocess
-
-
-    working = True
-    def w():
-        global working
-        working = True
-    def ww():
-        global working
-        working = False
-    def cmd(command):
-        return getstatusoutput(command)
-
-    def info(function):
-        
-        
-        
-        print(dir(function))
-        print(help(function))
-    def info_o(function):
-        
-        import turtle as t
-        import turtle
-        
-        print(dir(function))
-        print(help(function))
-    def win_version():
-        import sys
-        is_windows = hasattr(sys, 'getwindowsversion')
-        return is_windows
-    def cmd_filter_haak(op):
-        net = cmd(op)
-        
-        net_bericht = str(net)
-        if '[' in net_bericht:
-            haak = '['
-            haak2 = ']'
-        elif '{' in net_bericht:
-            haak = '{'
-            haak2 = '}'
-        elif '(' in net_bericht:
-            haak = '('
-            haak2 = ')'
-        else:
-            print('not a cmd output to filter')
-            raise ValueError('geen haken gevonden om op te filteren')
-        berijk = range(0, len(net_bericht))
-        go = False
-        now = False
-        message = ''
-        for i in berijk:
-            
-            if net_bericht[i] == haak or go == True or now == True:
-                if go == True:
-                    if not net_bericht[i] == haak2:
-                        message += net_bericht[i]
-                go = True
-                if net_bericht[i] == haak2:
-                    go = False
-                    if haak in net_bericht or not haak in net_bericht:
-                        now = True
-                        go = False
-                        if '[' in net_bericht:
-                            haak = '['
-                            haak2 = ']'
-                        elif '{' in net_bericht:
-                            haak = '{'
-                            haak2 = '}'
-                        elif '(' in net_bericht:
-                            haak = '('
-                            haak2 = ')'
-                        else:
-                            go = False
-                            break
-                        continue
-        return message
-    cmd_filter_haak('ping')
-    def filter_zin(zine):
-        zin = ''
-        into = ''
-        f = 0
-        lrn = str(zine)
-        print(lrn)
-        berijk = range(0, len(lrn))
-        for i in berijk:
-            if i < int(len(lrn) - 1):
-                into = into + lrn[int(i)] + lrn[int(i + 1)]
-            else: continue
-            if '\n' in into:
-                zin = zin + into + '\n'
-                print(zin)
-                into = ''
-        return zin
-    def filter_regel(zinig):
-        if not zinig == str:
-            zinig = str(zinig)
-        OUTPUT = zinig
-        if '0, ' in OUTPUT:
-            OUTPUT = OUTPUT.replace('0, ', '')
-        
-        OUTPUT = OUTPUT.replace('(\'', '')
-        OUTPUT = OUTPUT.replace('\')', '')
-        formatted_output = OUTPUT.replace('\\n', '\n')
-        return formatted_output
-    def data():
-        return cmd('ping -n 10 -l 1000 8.8.8.8')    
-    def cmd_out_list(command_or_data):
-        try:
-            e = filter_regel(cmd(command_or_data))
-            li = str(cmd(command_or_data)).split(sep='\\n')
-        except TypeError:
-            try:
-                e = filter_regel(command_or_data)
-                li = str(command_or_data).split(sep='\\n')
-            except Exception as ex:
-                print('a error raised')
-                raise ex('error')
-        return [e, li]
-    def cmd_out(command_or_data):
-        try:
-            e = filter_regel(cmd(command_or_data))
-            li = str(cmd(command_or_data)).split(sep='\\n')
-        except TypeError:
-            try:
-                e = filter_regel(command_or_data)
-                li = str(command_or_data).split(sep='\\n')
-            except Exception as ex:
-                print('a error raised')
-                raise ex('error')
-        return e
-    import sys
-
-    # Colored printing functions for strings that use universal ANSI escape sequences.
-    # fail: bold red, pass: bold green, warn: bold yellow, 
-    # info: bold blue, bold: bold white
-
-    class ColorPrint:
-
-        @staticmethod
-        def print_fail(message, end = '\n'):
-            sys.stderr.write(message.strip())
-
-        @staticmethod
-        def print_pass(message, end = '\n'):
-            sys.stdout.write(message.strip())
-
-        @staticmethod
-        def print_warn(message, end = '\n'):
-            sys.stderr.write(message.strip())
-
-        @staticmethod
-        def print_info(message, end = '\n'):
-            sys.stdout.write(message.strip())
-
-        @staticmethod
-        def print_bold(message, end = '\n'):
-            sys.stdout.write(message.strip())
-    if __name__ == '__main__':
-        import time
-        start = time.time()
-        try:
-            cmd('arp -a')
-        except Exception as ex:
-            print_warn(ex)
-            working = False
-            pass
-        stop = time.time()
-        re = stop - start
-        if working == True:
-            print('func cmd(arp -a) state: working.\nwifi: True\nping module importable: True\ntime to compleet func: ' + str(re))
-        start = time.time()
-        
-        try:
-            win_version()
-        except Exception as ex:
-            print_warn(ex)
-            working = False
-            pass
-        stop = time.time()
-        re = stop - start
-        if working == True:
-            print('func win_version state: working.\nwin_version module importable: True\ntime to compleet func: ' + str(re))
-        start = time.time()
-        w()
-        try:
-            cmd_filter_haak('arp -a')
-        except Exception as ex:
-            print_warn(ex)
-            ww()
-            pass
-        stop = time.time()
-        re = stop - start
-        if working == True:
-            print('func cmd_filter_haak(arp -a) state: working.\nwifi: True\nfilter_haak module importable: True\ntime to compleet func: ' + str(re))
-        w()
-        try:
-            filter_regel('arp -a')
-        except Exception as ex:
-            print_warn(ex)
-            ww()
-            pass
-        stop = time.time()
-        re = stop - start
-        if working == True:
-            print('func filter_regel(arp -a) state: working.\nwifi: True\nfilter_regel module importable: True\ntime to compleet func: ' + str(re))
-        w()
-        try:
-            cmd_out_list('arp -a')
-        except Exception as ex:
-            print_warn(ex)
-            ww()
-            pass
-        stop = time.time()
-        re = stop - start
-        if working == True:
-            print('func cmd_out_list(arp -a) state: working.\nwifi: True\ncmd_out_list module importable: True\ntime to compleet func: ' + str(re))
-        w()
-        try:
-            cmd_out('arp -a')
-        except Exception as ex:
-            print_warn(ex)
-            ww()
-            pass
-        stop = time.time()
-        re = stop - start
-        if working == True:
-            print('func cmd_out(arp -a) state: working.\nwifi: True\ncmd_out module importable: True\ntime to compleet func: ' + str(re))
-        w()
-        import getpass
-        print(getpass.getuser())
-
-    main_dir = os.path.split(os.path.abspath(__file__))[0]
-    def internet(host="8.8.8.8", port=53, timeout=3):
-        """
-        Host: 8.8.8.8 (google-public-dns-a.google.com)
-        OpenPort: 53/tcp
-        Service: domain (DNS/TCP)
-        """
-        try:
-            socket.setdefaulttimeout(timeout)
-            socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
-            return True
-        except Exception as ex:
-            print(ex)
-            return False
-    def chek_speed():
-            '''voer de functie internet uit en vergelijk de tijd voor en na om te kijken welke vergelijking is'''
-            start = time()
-            internet()
-            eind = time()
-            tijd = eind - start
-            
-            
-            return tijd
-    
-    import socket
-    import socket as s
-    
-    import time as _time
-    def info():
-        '''this is a lib where you can chek or test your wifi if you need commands:
-        is_connected() = looks for you of your wifi is connected
-        sub() = pings your wifi 8 times and returns the results
-        ping() = pings your wifi one time to chek your connection
-        connect_time() = looks how fast your wifi connects
-        internet() = returns True if you have wifi and False if not
-        chek_speed() = looks how vast the wifi reponse on a opening of google.com
-        internet_and_speed() = chek of you have wifi and how fast
-        cmd_ping() = pings your wifi one time
-        cmd(command) = type a command that cmd need to do
-        ping_data(times, task) = returns all ping data times for how many times and if task is print he prints all results and always he returns the data
-        ping_data return list max_time, min_time, middel, totaal, procent, n_procent, aantal, int(aantal - faal), tt
-        not all of this will work on a apple or linux pc
-        all tings work only on windows'''
-        help_data = '''this is a lib where you can chek or test your wifi if you need commands:
-    is_connected() = looks for you of your wifi is connected
-    sub() = pings your wifi 8 times and returns the results
-    ping() = pings your wifi one time to chek your connection
-    connect_time() = looks how fast your wifi connects
-    internet() = returns True if you have wifi and False if not
-    chek_speed() = looks how vast the wifi reponse on a opening of google.com
-    internet_and_speed() = chek of you have wifi and how fast
-    cmd_ping() = pings your wifi one time
-    cmd(command) = type a command that cmd need to do
-    ping_data(times, task) = returns all ping data times for how many times and if task is print he prints all results and always he returns the data
-    ping_data return list max_time, min_time, middel, totaal, procent, n_procent, aantal, int(aantal - faal), tt
-    not all of this will work on a apple or linux pc
-    all tings work only on windows'''
-        return help_data
-    def is_connected(hostname = "www.google.com"):
-      try:
-        # see if we can resolve the host name -- tells us if there is
-        # a DNS listening
-        host = socket.gethostbyname(hostname)
-        # connect to the host -- tells us if the host is actually
-        # reachable
-        s = socket.create_connection((host, 80), 2)
-        return True
-      except:
-         pass
-         return False
-
-    import subprocess
-    def sub():
-        al = subprocess.call('ping -n 8 -l 1000 8.8.8.8')
-        
-        return al
-    from platform   import system as system_name  # Returns the system/OS name
-    from subprocess import call   as system_call  # Execute a shell command
-
-    def ping(host='8.8.8.8'):
-        """
-        Returns True if host (str) responds to a ping request.
-        Remember that a host may not respond to a ping (ICMP) request even if the host name is valid.
-        """
-
-        # Ping command count option as function of OS
-        param = '-n' if system_name().lower()=='windows' else '-c'
-
-        # Building the command. Ex: "ping -c 1 google.com"
-        command = ['ping', param, '1', host]
-
-        # Pinging
-        return system_call(command) == 0
-
-    #import time
-    ...
-    def connect_time():
-      try:
-        # see if we can resolve the host name -- tells us if there is
-        # a DNS listening
-        host = socket.gethostbyname('google.com')
-        # connect to the host -- tells us if the host is actually
-        # reachable
-        before = _time.time()      # from Python 3.3 and above use before = time.perf_counter()
-        s = socket.create_connection((host, 80), 2)
-        after = _time.time()      # from Python 3.3 and above use after = time.perf_counter()
-        return after - before
-      except:
-        return -1
-    def internet(host="8.8.8.8", port=53, timeout=3):
-        """
-        Host: 8.8.8.8 (google-public-dns-a.google.com)
-        OpenPort: 53/tcp
-        Service: domain (DNS/TCP)
-        """
-        try:
-            socket.setdefaulttimeout(timeout)
-            socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
-            return True
-        except Exception as ex:
-            print(ex)
-            return False
-    def chek_speed():
-            '''voer de functie internet uit en vergelijk de tijd voor en na om te kijken welke vergelijking is'''
-            start = time()
-            internet()
-            eind = time()
-            tijd = eind - start
-            start = time()
-            ping()
-            eind = time()
-            tijd =  eind - start
-            
-            
-            return tijd
-    def internet_and_speed():
-        return str(internet()) + ' time to ping 32 bytes of data ' + str(chek_speed())
-
-    def cmd_ping():
-        global get_it
-        global get_in
-        get_it = True
-        if internet() == True:
-            try:
-                get_in = getstatusoutput('ping -n 1 -l 1000 8.8.8.8')
-            except Exception as ex:
-                print(ex)
-                get_it = False
-                get_in = None
-        else:
-            get_in = None
-            get_it = False
-        return get_in
-    def cmd(command):
-        return getstatusoutput(command)
-    def ping_data(aantal, taak):
-        global get_it
-        global get_in
-        tt = list()
-        string = ''
-        totaal = 0
-        middel = 0
-        faal = 0
-        procent = 0
-        n_procent = 0
-        min_doen = 0
-        for i in range(aantal):
-            
-            restart = time()
-            cmd_ping()
-            re_end = time()
-            if get_it == False:
-                faal = faal + 1
-            if Exception:
-                
-                if not get_it == False:
-                    faal = faal - 1
-            if not get_it == False:
-
-                re = re_end - restart
-                middel = middel + re
-                totaal = totaal + re
-                tt.append(re)
-                min_doen += 1
-        if middel > 0:
-            middel = middel / min_doen
-        
-        per = 100 / aantal
-        
-        if faal > 0:
-            min_p = faal * per
-            
-            
-            procent = 100 - min_p
-            n_procent = min_p
-        else:
-            procent += 100
-            faal = 0
-        try:
-            max_time = max(tt)
-            min_time = min(tt)
-        except ValueError:
-            max_time = None
-            min_time = None
-        if taak.lower() == 'print':
-            if procent > 0:
-                print('all the ping times: ' + str(tt))
-                print('max time to ping with 1000 bytes of data: ' + str(max_time))
-                print('and the min time: ' + str(min_time))
-                print('and the average time: ' + str(middel))
-                print('and the total time to ping ' + str(aantal) + ' times: ' + str(totaal))
-            print('number of sent packages: ' + str(aantal))
-            print('number of received packages: ' + str(aantal - faal))
-            print('percentage that has not been lost: ' + str(procent) + '%')
-            print('percentage that has been lost: ' + str(n_procent) + '%')
-        return [max_time, min_time, middel, totaal, procent, n_procent, aantal, int(aantal - faal), tt]
-
-    def filter_regel(zinig):
-        if not zinig == str:
-            zinig = str(zinig)
-        OUTPUT = zinig
-        
-        
-        OUTPUT = OUTPUT.replace('(0, \'', '')
-        OUTPUT = OUTPUT.replace('\')', '')
-        formatted_output = OUTPUT.replace('\\n', '\n')
-        return formatted_output
-    def data():
-        return cmd('ping -n 10 -l 1000 8.8.8.8')
-
-
-    def replace(boodschap, een, twee):
-        
-        boodschap = boodschap.replace(een, twee)
-        return boodschap
-    def open_site(url):
-        import webbrowser as w
-        w.open(url)
-
-    def is_even(getal):
-        return getal % 2 == 0
-    def is_oneven(getal):
-        if not getal % 2 == 0:
-            return True
-        else:
-            return False
-
-    def plus(a, b):
-        c = a + b
-        return c
-
-    def min_(a, b):
-        c = a - b
-        return c
-
-    def keer(a, b):
-        c = a * b
-        return c
-
-    def deel(a, b):
-        c = a / b
-        return c
-    def maak_tegen(getal):
-        if getal < 0:
-            getal = abs(getal)
-            return getal
-        else:
-            deel = getal
-            deel = deel * 2
-            getal = getal - deel
-            return getal
-        
-
-    def afstand(x1, y1, x2, y2):
-        if x1 or x2 < 0 or x1 and x2 < 0:
-            x = x1 - x2
-        elif x1 and x2 == 0:
-            x = 0
-        else:
-            x = x1 - x2
-        if y1 or y2 < 0 or y1 and y2 < 0:
-            y = y1 - y2
-        elif y1 and y2 == 0:
-            y = 0
-        else:
-            y = y1 - y2
-        return x, y
-    def fahr_to_celsius(temp):
-        return ((temp * (5/9)) + 32)
-
-    def celsius_to_kelvin(temp_c):
-        return temp_c + 273.15
-
-    def fahr_to_kelvin(temp_f):
-        temp_c = fahr_to_celsius(temp_f)
-        temp_k = celsius_to_kelvin(temp_c)
-        return temp_k
-
-    def convert_c_to_f(temp):
-        
-        c = (temp-32)*5/9
-        return [c, str(c)]
-
-
-
-
-
-
-class wifi:
-    
-    import socket
-    import socket as s
-    
-    import time as _time
-    __all__ = ['info()', 'is_connected()', 'ping()', 'connect_time()', 'internet()',
-             'chek_speed', 'internet_and_speed()', 'cmd_ping()', 'cmd(command)',
-             'ping_data(times_repeat, task_typ_print_to_print_and_return_and_return_for_only_return',
-             'filter_regel(data) replace \\n with \n']
-    def info():
-        '''this is a lib where you can chek or test your wifi if you need commands:
-        is_connected() = looks for you of your wifi is connected
-        sub() = pings your wifi 8 times and returns the results
-        ping() = pings your wifi one time to chek your connection
-        connect_time() = looks how fast your wifi connects
-        internet() = returns True if you have wifi and False if not
-        chek_speed() = looks how vast the wifi reponse on a opening of google.com
-        internet_and_speed() = chek of you have wifi and how fast
-        cmd_ping() = pings your wifi one time
-        cmd(command) = type a command that cmd need to do
-        ping_data(times, task) = returns all ping data times for how many times and if task is print he prints all results and always he returns the data
-        ping_data return list max_time, min_time, middel, totaal, procent, n_procent, aantal, int(aantal - faal), tt
-        not all of this will work on a apple or linux pc
-        all tings work only on windows'''
-        help_data = '''this is a lib where you can chek or test your wifi if you need commands:
-    is_connected() = looks for you of your wifi is connected
-    sub() = pings your wifi 8 times and returns the results
-    ping() = pings your wifi one time to chek your connection
-    connect_time() = looks how fast your wifi connects
-    internet() = returns True if you have wifi and False if not
-    chek_speed() = looks how vast the wifi reponse on a opening of google.com
-    internet_and_speed() = chek of you have wifi and how fast
-    cmd_ping() = pings your wifi one time
-    cmd(command) = type a command that cmd need to do
-    ping_data(times, task) = returns all ping data times for how many times and if task is print he prints all results and always he returns the data
-    ping_data return list max_time, min_time, middel, totaal, procent, n_procent, aantal, int(aantal - faal), tt
-    not all of this will work on a apple or linux pc
-    all tings work only on windows'''
-        return help_data
-    def is_connected(hostname = "www.google.com"):
-      try:
-        # see if we can resolve the host name -- tells us if there is
-        # a DNS listening
-        host = socket.gethostbyname(hostname)
-        # connect to the host -- tells us if the host is actually
-        # reachable
-        s = socket.create_connection((host, 80), 2)
-        return True
-      except:
-         pass
-         return False
-
-    import subprocess
-    def sub():
-        al = subprocess.call('ping -n 8 -l 1000 8.8.8.8')
-        
-        return al
-    from platform   import system as system_name  # Returns the system/OS name
-    from subprocess import call   as system_call  # Execute a shell command
-
-    def ping(host='8.8.8.8'):
-        """
-        Returns True if host (str) responds to a ping request.
-        Remember that a host may not respond to a ping (ICMP) request even if the host name is valid.
-        """
-
-        # Ping command count option as function of OS
-        param = '-n' if system_name().lower()=='windows' else '-c'
-
-        # Building the command. Ex: "ping -c 1 google.com"
-        command = ['ping', param, '1', host]
-
-        # Pinging
-        return system_call(command) == 0
-
-    #import time
-    ...
-    def connect_time():
-      try:
-        # see if we can resolve the host name -- tells us if there is
-        # a DNS listening
-        host = socket.gethostbyname('google.com')
-        # connect to the host -- tells us if the host is actually
-        # reachable
-        before = _time.time()      # from Python 3.3 and above use before = time.perf_counter()
-        s = socket.create_connection((host, 80), 2)
-        after = _time.time()      # from Python 3.3 and above use after = time.perf_counter()
-        return after - before
-      except:
-        return -1
-    def internet(host="8.8.8.8", port=53, timeout=3):
-        """
-        Host: 8.8.8.8 (google-public-dns-a.google.com)
-        OpenPort: 53/tcp
-        Service: domain (DNS/TCP)
-        """
-        try:
-            socket.setdefaulttimeout(timeout)
-            socket.socket(socket.AF_INET, socket.SOCK_STREAM).connect((host, port))
-            return True
-        except Exception as ex:
-            print(ex)
-            return False
-    def chek_speed():
-            '''voer de functie internet uit en vergelijk de tijd voor en na om te kijken welke vergelijking is'''
-            start = time()
-            internet()
-            eind = time()
-            tijd = eind - start
-            start = time()
-            ping()
-            eind = time()
-            tijd =  eind - start
-            
-            
-            return tijd
-    def internet_and_speed():
-        return str('ineternet connection: ' + internet()) + ' time to ping 32 bytes of data ' + str(chek_speed())
-
-    def cmd_ping():
-        global get_it
-        global get_in
-        get_it = True
-        if internet() == True:
-            try:
-                get_in = getstatusoutput('ping -n 1 -l 1000 8.8.8.8')
-            except Exception as ex:
-                print(ex)
-                get_it = False
-                get_in = None
-        else:
-            get_in = None
-            get_it = False
-        return get_in
-    def cmd(command):
-        return getstatusoutput(command)
-    def ping_data(aantal, taak):
-        global get_it
-        global get_in
-        tt = list()
-        string = ''
-        totaal = 0
-        middel = 0
-        faal = 0
-        procent = 0
-        n_procent = 0
-        min_doen = 0
-        for i in range(aantal):
-            
-            restart = time()
-            cmd_ping()
-            re_end = time()
-            if get_it == False:
-                faal = faal + 1
-            if Exception:
-                
-                if not get_it == False:
-                    faal = faal - 1
-            if not get_it == False:
-
-                re = re_end - restart
-                middel = middel + re
-                totaal = totaal + re
-                tt.append(re)
-                min_doen += 1
-        if middel > 0:
-            middel = middel / min_doen
-        
-        per = 100 / aantal
-        
-        if faal > 0:
-            min_p = faal * per
-            
-            
-            procent = 100 - min_p
-            n_procent = min_p
-        else:
-            procent += 100
-            faal = 0
-        try:
-            max_time = max(tt)
-            min_time = min(tt)
-        except ValueError:
-            max_time = None
-            min_time = None
-        if taak.lower() == 'print':
-            if procent > 0:
-                print('all the ping times: ' + str(tt))
-                print('max time to ping with 1000 bytes of data: ' + str(max_time))
-                print('and the min time: ' + str(min_time))
-                print('and the average time: ' + str(middel))
-                print('and the total time to ping ' + str(aantal) + ' times: ' + str(totaal))
-            print('number of sent packages: ' + str(aantal))
-            print('number of received packages: ' + str(aantal - faal))
-            print('percentage that has not been lost: ' + str(procent) + '%')
-            print('percentage that has been lost: ' + str(n_procent) + '%')
-        return [max_time, min_time, middel, totaal, procent, n_procent, aantal, int(aantal - faal), tt]
-
-    def filter_regel(zinig):
-        if not zinig == str:
-            zinig = str(zinig)
-        OUTPUT = zinig
-        
-        
-        OUTPUT = OUTPUT.replace('(0, \'', '')
-        OUTPUT = OUTPUT.replace('\')', '')
-        formatted_output = OUTPUT.replace('\\n', '\n')
-        return formatted_output
-    def data():
-        return cmd('ping -n 10 -l 1000 8.8.8.8')
-
-
-class system:
-    
-    import os
-    import sys
-    
-    import socket
-    import socket as s
-    
-    import time as _time
-    import tkinter, time, subprocess as sub, wifi, subprocess
-    
-    __all__ = ['main_dir', 'cmd(command)', 'info(module)', 'win_version()', 'cmd_filter_haak(command) filters the ([{}]) from cmd outputs', 'filter_regel(cmd_command_or_data) replace \\n with a real \n', 'cmd_out_list(command_or_data) replace \\n with \n and make a list with as split \\n',
-               'cmd_out(command_or_data) replace \\n with a real \n', 'class ColorPrint:', ['print_fail(message)', 'print_pass(message)', 'print_warn(message)',
-                                                                       'print_info(message)', 'print_bold(message)']
-               ]
-
-    main_dir = os.path.split(os.path.abspath(__file__))[0]
-    working = True
-    def w():
-        global working
-        working = True
-    def ww():
-        global working
-        working = False
-    def cmd(command):
-        return getstatusoutput(command)
-
-    def info(function):
-        
-        
-        
-        print(dir(function))
-        print(help(function))
-    def info_o(function):
-        
-        import turtle as t
-        import turtle
-        
-        print(dir(function))
-        print(help(function))
-    def win_version():
-        import sys
-        is_windows = hasattr(sys, 'getwindowsversion')
-        return is_windows
-    def cmd_filter_haak(op):
-        net = cmd(op)
-        
-        net_bericht = str(net)
-        if '[' in net_bericht:
-            haak = '['
-            haak2 = ']'
-        elif '{' in net_bericht:
-            haak = '{'
-            haak2 = '}'
-        elif '(' in net_bericht:
-            haak = '('
-            haak2 = ')'
-        else:
-            print('not a cmd output to filter')
-            raise ValueError('geen haken gevonden om op te filteren')
-        berijk = range(0, len(net_bericht))
-        go = False
-        now = False
-        message = ''
-        for i in berijk:
-            
-            if net_bericht[i] == haak or go == True or now == True:
-                if go == True:
-                    if not net_bericht[i] == haak2:
-                        message += net_bericht[i]
-                go = True
-                if net_bericht[i] == haak2:
-                    go = False
-                    if haak in net_bericht or not haak in net_bericht:
-                        now = True
-                        go = False
-                        if '[' in net_bericht:
-                            haak = '['
-                            haak2 = ']'
-                        elif '{' in net_bericht:
-                            haak = '{'
-                            haak2 = '}'
-                        elif '(' in net_bericht:
-                            haak = '('
-                            haak2 = ')'
-                        else:
-                            go = False
-                            break
-                        continue
-        return message
-    cmd_filter_haak('ping')
-    def filter_zin(zine):
-        zin = ''
-        into = ''
-        f = 0
-        lrn = str(zine)
-        print(lrn)
-        berijk = range(0, len(lrn))
-        for i in berijk:
-            if i < int(len(lrn) - 1):
-                into = into + lrn[int(i)] + lrn[int(i + 1)]
-            else: continue
-            if '\n' in into:
-                zin = zin + into + '\n'
-                print(zin)
-                into = ''
-        return zin
-    def filter_regel(zinig):
-        if not zinig == str:
-            zinig = str(zinig)
-        try:
-            cmd(zinig)
-        except Exception:
-            pass
-        OUTPUT = zinig
-        if '0, ' in OUTPUT:
-            OUTPUT = OUTPUT.replace('0, ', '')
-        
-        OUTPUT = OUTPUT.replace('(\'', '')
-        OUTPUT = OUTPUT.replace('\')', '')
-        formatted_output = OUTPUT.replace('\\n', '\n')
-        return formatted_output
-    def data():
-        return cmd('ping -n 10 -l 1000 8.8.8.8')    
-    def cmd_out_list(command_or_data):
-        try:
-            e = filter_regel(cmd(command_or_data))
-            li = str(cmd(command_or_data)).split(sep='\\n')
-        except Exception:
-            try:
-                e = filter_regel(command_or_data)
-                li = str(command_or_data).split(sep='\\n')
-            except Exception as ex:
-                print('a error raised')
-                raise ex('error')
-        return [e, li]
-    def cmd_out(command_or_data):
-        try:
-            e = filter_regel(cmd(command_or_data))
-            li = str(cmd(command_or_data)).split(sep='\\n')
-        except TypeError:
-            try:
-                e = filter_regel(command_or_data)
-                li = str(command_or_data).split(sep='\\n')
-            except Exception as ex:
-                print('a error raised')
-                raise ex('error')
-        return e
-    import sys
-
-    # Colored printing functions for strings that use universal ANSI escape sequences.
-    # fail: bold red, pass: bold green, warn: bold yellow, 
-    # info: bold blue, bold: bold white
-
-    class ColorPrint:
-
-        @staticmethod
-        def print_fail(message, end = '\n'):
-            sys.stderr.write(message.strip() + end)
-
-        @staticmethod
-        def print_pass(message, end = '\n'):
-            sys.stdout.write(message.strip() + end)
-
-        @staticmethod
-        def print_warn(message, end = '\n'):
-            sys.stderr.write(message.strip() + end)
-
-        @staticmethod
-        def print_info(message, end = '\n'):
-            sys.stdout.write(message.strip() + end)
-
-        @staticmethod
-        def print_bold(message, end = '\n'):
-            sys.stdout.write(message.strip() + end)
-    if __name__ == '__main__':
-        import time
-        start = time.time()
-        try:
-            cmd('arp -a')
-        except Exception as ex:
-            print_warn(ex)
-            working = False
-            pass
-        stop = time.time()
-        re = stop - start
-        if working == True:
-            print('func cmd(arp -a) state: working.\nwifi: True\nping module importable: True\ntime to compleet func: ' + str(re))
-        start = time.time()
-        
-        try:
-            win_version()
-        except Exception as ex:
-            print_warn(ex)
-            working = False
-            pass
-        stop = time.time()
-        re = stop - start
-        if working == True:
-            print('func win_version state: working.\nwin_version module importable: True\ntime to compleet func: ' + str(re))
-        start = time.time()
-        w()
-        try:
-            cmd_filter_haak('arp -a')
-        except Exception as ex:
-            print_warn(ex)
-            ww()
-            pass
-        stop = time.time()
-        re = stop - start
-        if working == True:
-            print('func cmd_filter_haak(arp -a) state: working.\nwifi: True\nfilter_haak module importable: True\ntime to compleet func: ' + str(re))
-        w()
-        try:
-            filter_regel('arp -a')
-        except Exception as ex:
-            print_warn(ex)
-            ww()
-            pass
-        stop = time.time()
-        re = stop - start
-        if working == True:
-            print('func filter_regel(arp -a) state: working.\nwifi: True\nfilter_regel module importable: True\ntime to compleet func: ' + str(re))
-        w()
-        try:
-            cmd_out_list('arp -a')
-        except Exception as ex:
-            print_warn(ex)
-            ww()
-            pass
-        stop = time.time()
-        re = stop - start
-        if working == True:
-            print('func cmd_out_list(arp -a) state: working.\nwifi: True\ncmd_out_list module importable: True\ntime to compleet func: ' + str(re))
-        w()
-        try:
-            cmd_out('arp -a')
-        except Exception as ex:
-            print_warn(ex)
-            ww()
-            pass
-        stop = time.time()
-        re = stop - start
-        if working == True:
-            print('func cmd_out(arp -a) state: working.\nwifi: True\ncmd_out module importable: True\ntime to compleet func: ' + str(re))
-        w()
-        import getpass
-        print(getpass.getuser())
-
-
-
+    loading = '\b' * rn  # for strings, * is the repeat operator
+    rest = fill * int(100 - rn)
+
+    # this loop replaces each dot with a hash!
+    print('[\r%0s%1s] loading at %2d percent!' % (loading, rest, rn), end='\n')
+
+if __name__ == '__main__':
+     for rn in range(1, 101):
+        bar(rn)
+from progress.bar import *
+from progress.spinner import *
+from progress.counter import *
+class progress_types:
+    __all__ = ['bar', 'charging_bar', 'filling_sqares_bar', 'filling_circles_bar', 'incremental_bar', 'pixel_bar',
+               'shady_bar', 'spinner', 'pie_spinner', 'moon_spinner', 'line_spinner', 'pixel_spinner',
+               'counter', 'countdown', 'stack', 'pie']
+    bar = Bar
+    charging_bar = ChargingBar
+    filling_sqares_bar = FillingSquaresBar
+    filling_circles_bar = FillingCirclesBar
+    incremental_bar = IncrementalBar
+    pixel_bar = PixelBar
+    shady_bar = ShadyBar
+    spinner = Spinner
+    pie_spinner = PieSpinner
+    moon_spinner = MoonSpinner
+    line_spinner = LineSpinner
+    pixel_spinner = PixelSpinner
+    counter = Counter
+    countdown = Countdown
+    stack = Stack
+    pie = Pie
+
+progres_types = progress_types
+progress_types = progress_types
+if __name__ == '__main__':
+    bar = Bar('Processing', max=20)
+    for i in range(20):
+        # Do some work
+        bar.next()
+        print('')
+    bar.finish()

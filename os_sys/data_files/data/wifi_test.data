@@ -1,0 +1,1 @@
+﻿connect_test = [ip='8.8.8.8'(ip.config()), get_log=9083, get_in=<?>wifi==True?</?>, get_in?*True*?*pass*{exit|error=NotConnectedError}]
