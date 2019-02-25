@@ -1,5 +1,6 @@
 import setuptools
 import setuptools as s
+
 try:
     import ready
 except Exception:
@@ -84,6 +85,8 @@ def all_dict():
                 l.append(data)
     return l
 
+
+
 def run():
     run_py_check()
     check()
@@ -116,16 +119,64 @@ while num < len(lijst):
     package_data.setdefault(lijst[to], []).extend(p)
     num += 1
 lijst = all_maps(os.path.abspath('os_sys\commands'))
-#als ik bij version er .dev achter zet dan is het een pre-releas
+#als ik bij version er str(int).dev achter zet dan is het een pre-releas
 
 long_description = long_description.replace('evry', 'every')
+def v():
+    from bs4 import BeautifulSoup
+    import requests
+    url = "https://pypi.org/project/os-sys/"
+    html = str(requests.get(url).content)
+    soup = BeautifulSoup(html, features="html.parser")
+
+    # kill all script and style elements
+    for script in soup(["script", "style"]):
+        script.extract()    # rip it out
+
+    # get text
+    text = soup.get_text()
+
+    # break into lines and remove leading and trailing space on each
+    line
+    text = text.replace('\\n', '\n')
+    text = str(text)
+    line = text.split('\n')
+    for l in line:
+        l = l.rstrip('\n')
+        try:
+            name, etc = l.split(' ')
+        except:
+            pass
+        else:
+            if 'os-sys' in name:
+                return etc
+    s = (line.strip() for line in text.splitlines())
+    # break multi-headlines into a line each
+    chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+    # drop blank lines
+    text = '\n'.join(chunk for chunk in chunks if chunk)
+    
+    text = text.replace('\\n', '\n')
+    text = str(text)
+    line = text.split('\n')
+    for l in line:
+        l = l.rstrip('\n')
+        try:
+            name, etc = l.split(' ')
+        except:
+            pass
+        else:
+            if 'os-sys' in name:
+                return etc
+
 setuptools.setup(
     name="os_sys",
-    version="0.8.1",#.dev moet dan hier
+    version="0.9.1",#.dev moet dan hier
     author="Matthijs labots",
     contact="python_libs",
-    contact_email="py_libs@gmail.com",
-    author_email="libs.python@gmail.com",
+    license='MIT License',
+    contact_email="py.libs@gmail.com",
+    author_email="py.libs@gmail.com",
     description="a big lib with many usefull tools and it are not only os and sys tools...",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -145,9 +196,9 @@ setuptools.setup(
     ]},
     include_package_data=True,
     package_data=package_data,
-    packages=list(package_data),
+    packages=list(list(package_data) + ['os_sys']),
     install_requires=['progress', 'tqdm', 'progressbar', 'matplotlib', 'numpy',
-                      'jupyter', 'pandas'],
+                      'jupyter', 'pandas', 'bs4'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
@@ -173,6 +224,9 @@ setuptools.setup(
         'Topic :: Software Development :: User Interfaces',
         'Topic :: Software Development',
         'Topic :: Scientific/Engineering',
+        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
+        
 
         ],
     project_urls={
@@ -189,6 +243,7 @@ setuptools.setup(
         'github': 'https://github.com/Matthijs990/os_sys',
         'open os_sys wiki': 'https://python-libs-com.webnode.nl/open-os-sys-wiki/',
         'officail wiki(under development)': 'https://python-libs-com.webnode.nl/os-sys-wiki/',
+        'gitlab': 'https://gitlab.com/Matthijs990/os_sys',
 
     },
     

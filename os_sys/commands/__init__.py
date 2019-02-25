@@ -91,7 +91,7 @@ def download_zip():
     url = 'https://jumpshare.com/'  
     r = requests.get('https://github.com/Matthijs990/os_sys/archive/master.zip')
     print('downloading:')
-
+    from tqdm import tqdm as Bar
     with open('test.zip', 'wb') as f:  
         f.write(r.content)
     from time import sleep, time

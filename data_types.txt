@@ -1,1 +1,1 @@
-*.init/*.exe/*.data/*.nim/*.config/*.set/*.make/*.setting/*.reset/*.back_up/*.lib/*.h/*.py/*.pyw
+*.init/*.exe/*.data/*.nim/*.config/*.set/*.make/*.setting/*.reset/*.back_up/*.lib/*.h/*.py/*.pyw/*.ins/*.zip/*.tar/*.tar.gz/*

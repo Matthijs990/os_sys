@@ -1,0 +1,672 @@
+Development Status :: 1 - Planning  Copy classifier
+Development Status :: 2 - Pre-Alpha  Copy classifier
+Development Status :: 3 - Alpha  Copy classifier
+Development Status :: 4 - Beta  Copy classifier
+Development Status :: 5 - Production/Stable  Copy classifier
+Development Status :: 6 - Mature  Copy classifier
+Development Status :: 7 - Inactive  Copy classifier
+Environment :: Console  Copy classifier
+Environment :: Console :: Curses  Copy classifier
+Environment :: Console :: Framebuffer  Copy classifier
+Environment :: Console :: Newt  Copy classifier
+Environment :: Console :: svgalib  Copy classifier
+Environment :: Handhelds/PDA's  Copy classifier
+Environment :: MacOS X  Copy classifier
+Environment :: MacOS X :: Aqua  Copy classifier
+Environment :: MacOS X :: Carbon  Copy classifier
+Environment :: MacOS X :: Cocoa  Copy classifier
+Environment :: No Input/Output (Daemon)  Copy classifier
+Environment :: OpenStack  Copy classifier
+Environment :: Other Environment  Copy classifier
+Environment :: Plugins  Copy classifier
+Environment :: Web Environment  Copy classifier
+Environment :: Web Environment :: Buffet  Copy classifier
+Environment :: Web Environment :: Mozilla  Copy classifier
+Environment :: Web Environment :: ToscaWidgets  Copy classifier
+Environment :: Win32 (MS Windows)  Copy classifier
+Environment :: X11 Applications  Copy classifier
+Environment :: X11 Applications :: Gnome  Copy classifier
+Environment :: X11 Applications :: GTK  Copy classifier
+Environment :: X11 Applications :: KDE  Copy classifier
+Environment :: X11 Applications :: Qt  Copy classifier
+Framework :: AsyncIO  Copy classifier
+Framework :: BFG  Copy classifier
+Framework :: Bob  Copy classifier
+Framework :: Bottle  Copy classifier
+Framework :: Buildout  Copy classifier
+Framework :: Buildout :: Extension  Copy classifier
+Framework :: Buildout :: Recipe  Copy classifier
+Framework :: CastleCMS  Copy classifier
+Framework :: CastleCMS :: Theme  Copy classifier
+Framework :: Chandler  Copy classifier
+Framework :: CherryPy  Copy classifier
+Framework :: CubicWeb  Copy classifier
+Framework :: Django  Copy classifier
+Framework :: Django :: 1.10  Copy classifier
+Framework :: Django :: 1.11  Copy classifier
+Framework :: Django :: 1.4  Copy classifier
+Framework :: Django :: 1.5  Copy classifier
+Framework :: Django :: 1.6  Copy classifier
+Framework :: Django :: 1.7  Copy classifier
+Framework :: Django :: 1.8  Copy classifier
+Framework :: Django :: 1.9  Copy classifier
+Framework :: Django :: 2.0  Copy classifier
+Framework :: Django :: 2.1  Copy classifier
+Framework :: Django :: 2.2  Copy classifier
+Framework :: Flake8  Copy classifier
+Framework :: Flask  Copy classifier
+Framework :: Hypothesis  Copy classifier
+Framework :: IDLE  Copy classifier
+Framework :: IPython  Copy classifier
+Framework :: Jupyter  Copy classifier
+Framework :: Lektor  Copy classifier
+Framework :: Masonite  Copy classifier
+Framework :: Odoo  Copy classifier
+Framework :: Opps  Copy classifier
+Framework :: Paste  Copy classifier
+Framework :: Pelican  Copy classifier
+Framework :: Pelican :: Plugins  Copy classifier
+Framework :: Pelican :: Themes  Copy classifier
+Framework :: Plone  Copy classifier
+Framework :: Plone :: 3.2  Copy classifier
+Framework :: Plone :: 3.3  Copy classifier
+Framework :: Plone :: 4.0  Copy classifier
+Framework :: Plone :: 4.1  Copy classifier
+Framework :: Plone :: 4.2  Copy classifier
+Framework :: Plone :: 4.3  Copy classifier
+Framework :: Plone :: 5.0  Copy classifier
+Framework :: Plone :: 5.1  Copy classifier
+Framework :: Plone :: 5.2  Copy classifier
+Framework :: Plone :: 5.3  Copy classifier
+Framework :: Plone :: Theme  Copy classifier
+Framework :: Pylons  Copy classifier
+Framework :: Pyramid  Copy classifier
+Framework :: Pytest  Copy classifier
+Framework :: Review Board  Copy classifier
+Framework :: Robot Framework  Copy classifier
+Framework :: Robot Framework :: Library  Copy classifier
+Framework :: Robot Framework :: Tool  Copy classifier
+Framework :: Scrapy  Copy classifier
+Framework :: Setuptools Plugin  Copy classifier
+Framework :: Sphinx  Copy classifier
+Framework :: Sphinx :: Extension  Copy classifier
+Framework :: Sphinx :: Theme  Copy classifier
+Framework :: tox  Copy classifier
+Framework :: Trac  Copy classifier
+Framework :: Trio  Copy classifier
+Framework :: Tryton  Copy classifier
+Framework :: TurboGears  Copy classifier
+Framework :: TurboGears :: Applications  Copy classifier
+Framework :: TurboGears :: Widgets  Copy classifier
+Framework :: Twisted  Copy classifier
+Framework :: Wagtail  Copy classifier
+Framework :: Wagtail :: 1  Copy classifier
+Framework :: Wagtail :: 2  Copy classifier
+Framework :: ZODB  Copy classifier
+Framework :: Zope  Copy classifier
+Framework :: Zope2  Copy classifier
+Framework :: Zope :: 2  Copy classifier
+Framework :: Zope3  Copy classifier
+Framework :: Zope :: 3  Copy classifier
+Framework :: Zope :: 4  Copy classifier
+Intended Audience :: Customer Service  Copy classifier
+Intended Audience :: Developers  Copy classifier
+Intended Audience :: Education  Copy classifier
+Intended Audience :: End Users/Desktop  Copy classifier
+Intended Audience :: Financial and Insurance Industry  Copy classifier
+Intended Audience :: Healthcare Industry  Copy classifier
+Intended Audience :: Information Technology  Copy classifier
+Intended Audience :: Legal Industry  Copy classifier
+Intended Audience :: Manufacturing  Copy classifier
+Intended Audience :: Other Audience  Copy classifier
+Intended Audience :: Religion  Copy classifier
+Intended Audience :: Science/Research  Copy classifier
+Intended Audience :: System Administrators  Copy classifier
+Intended Audience :: Telecommunications Industry  Copy classifier
+License :: Aladdin Free Public License (AFPL)  Copy classifier
+License :: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication  Copy classifier
+License :: CeCILL-B Free Software License Agreement (CECILL-B)  Copy classifier
+License :: CeCILL-C Free Software License Agreement (CECILL-C)  Copy classifier
+License :: DFSG approved  Copy classifier
+License :: Eiffel Forum License (EFL)  Copy classifier
+License :: Free For Educational Use  Copy classifier
+License :: Free For Home Use  Copy classifier
+License :: Free for non-commercial use  Copy classifier
+License :: Freely Distributable  Copy classifier
+License :: Free To Use But Restricted  Copy classifier
+License :: Freeware  Copy classifier
+License :: GUST Font License 1.0  Copy classifier
+License :: GUST Font License 2006-09-30  Copy classifier
+License :: Netscape Public License (NPL)  Copy classifier
+License :: Nokia Open Source License (NOKOS)  Copy classifier
+License :: OSI Approved  Copy classifier
+License :: OSI Approved :: Academic Free License (AFL)  Copy classifier
+License :: OSI Approved :: Apache Software License  Copy classifier
+License :: OSI Approved :: Apple Public Source License  Copy classifier
+License :: OSI Approved :: Artistic License  Copy classifier
+License :: OSI Approved :: Attribution Assurance License  Copy classifier
+License :: OSI Approved :: Boost Software License 1.0 (BSL-1.0)  Copy classifier
+License :: OSI Approved :: BSD License  Copy classifier
+License :: OSI Approved :: CEA CNRS Inria Logiciel Libre License, version 2.1 (CeCILL-2.1)  Copy classifier
+License :: OSI Approved :: Common Development and Distribution License 1.0 (CDDL-1.0)  Copy classifier
+License :: OSI Approved :: Common Public License  Copy classifier
+License :: OSI Approved :: Eclipse Public License 1.0 (EPL-1.0)  Copy classifier
+License :: OSI Approved :: Eclipse Public License 2.0 (EPL-2.0)  Copy classifier
+License :: OSI Approved :: Eiffel Forum License  Copy classifier
+License :: OSI Approved :: European Union Public Licence 1.0 (EUPL 1.0)  Copy classifier
+License :: OSI Approved :: European Union Public Licence 1.1 (EUPL 1.1)  Copy classifier
+License :: OSI Approved :: European Union Public Licence 1.2 (EUPL 1.2)  Copy classifier
+License :: OSI Approved :: GNU Affero General Public License v3  Copy classifier
+License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)  Copy classifier
+License :: OSI Approved :: GNU Free Documentation License (FDL)  Copy classifier
+License :: OSI Approved :: GNU General Public License (GPL)  Copy classifier
+License :: OSI Approved :: GNU General Public License v2 (GPLv2)  Copy classifier
+License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)  Copy classifier
+License :: OSI Approved :: GNU General Public License v3 (GPLv3)  Copy classifier
+License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)  Copy classifier
+License :: OSI Approved :: GNU Lesser General Public License v2 (LGPLv2)  Copy classifier
+License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)  Copy classifier
+License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)  Copy classifier
+License :: OSI Approved :: GNU Lesser General Public License v3 or later (LGPLv3+)  Copy classifier
+License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)  Copy classifier
+License :: OSI Approved :: IBM Public License  Copy classifier
+License :: OSI Approved :: Intel Open Source License  Copy classifier
+License :: OSI Approved :: ISC License (ISCL)  Copy classifier
+License :: OSI Approved :: Jabber Open Source License  Copy classifier
+License :: OSI Approved :: MirOS License (MirOS)  Copy classifier
+License :: OSI Approved :: MIT License  Copy classifier
+License :: OSI Approved :: MITRE Collaborative Virtual Workspace License (CVW)  Copy classifier
+License :: OSI Approved :: Motosoto License  Copy classifier
+License :: OSI Approved :: Mozilla Public License 1.0 (MPL)  Copy classifier
+License :: OSI Approved :: Mozilla Public License 1.1 (MPL 1.1)  Copy classifier
+License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)  Copy classifier
+License :: OSI Approved :: Nethack General Public License  Copy classifier
+License :: OSI Approved :: Nokia Open Source License  Copy classifier
+License :: OSI Approved :: Open Group Test Suite License  Copy classifier
+License :: OSI Approved :: PostgreSQL License  Copy classifier
+License :: OSI Approved :: Python License (CNRI Python License)  Copy classifier
+License :: OSI Approved :: Python Software Foundation License  Copy classifier
+License :: OSI Approved :: Qt Public License (QPL)  Copy classifier
+License :: OSI Approved :: Ricoh Source Code Public License  Copy classifier
+License :: OSI Approved :: SIL Open Font License 1.1 (OFL-1.1)  Copy classifier
+License :: OSI Approved :: Sleepycat License  Copy classifier
+License :: OSI Approved :: Sun Industry Standards Source License (SISSL)  Copy classifier
+License :: OSI Approved :: Sun Public License  Copy classifier
+License :: OSI Approved :: Universal Permissive License (UPL)  Copy classifier
+License :: OSI Approved :: University of Illinois/NCSA Open Source License  Copy classifier
+License :: OSI Approved :: Vovida Software License 1.0  Copy classifier
+License :: OSI Approved :: W3C License  Copy classifier
+License :: OSI Approved :: X.Net License  Copy classifier
+License :: OSI Approved :: zlib/libpng License  Copy classifier
+License :: OSI Approved :: Zope Public License  Copy classifier
+License :: Other/Proprietary License  Copy classifier
+License :: Public Domain  Copy classifier
+License :: Repoze Public License  Copy classifier
+Natural Language :: Afrikaans  Copy classifier
+Natural Language :: Arabic  Copy classifier
+Natural Language :: Bengali  Copy classifier
+Natural Language :: Bosnian  Copy classifier
+Natural Language :: Bulgarian  Copy classifier
+Natural Language :: Cantonese  Copy classifier
+Natural Language :: Catalan  Copy classifier
+Natural Language :: Chinese (Simplified)  Copy classifier
+Natural Language :: Chinese (Traditional)  Copy classifier
+Natural Language :: Croatian  Copy classifier
+Natural Language :: Czech  Copy classifier
+Natural Language :: Danish  Copy classifier
+Natural Language :: Dutch  Copy classifier
+Natural Language :: English  Copy classifier
+Natural Language :: Esperanto  Copy classifier
+Natural Language :: Finnish  Copy classifier
+Natural Language :: French  Copy classifier
+Natural Language :: Galician  Copy classifier
+Natural Language :: German  Copy classifier
+Natural Language :: Greek  Copy classifier
+Natural Language :: Hebrew  Copy classifier
+Natural Language :: Hindi  Copy classifier
+Natural Language :: Hungarian  Copy classifier
+Natural Language :: Icelandic  Copy classifier
+Natural Language :: Indonesian  Copy classifier
+Natural Language :: Italian  Copy classifier
+Natural Language :: Japanese  Copy classifier
+Natural Language :: Javanese  Copy classifier
+Natural Language :: Korean  Copy classifier
+Natural Language :: Latin  Copy classifier
+Natural Language :: Latvian  Copy classifier
+Natural Language :: Macedonian  Copy classifier
+Natural Language :: Malay  Copy classifier
+Natural Language :: Marathi  Copy classifier
+Natural Language :: Norwegian  Copy classifier
+Natural Language :: Panjabi  Copy classifier
+Natural Language :: Persian  Copy classifier
+Natural Language :: Polish  Copy classifier
+Natural Language :: Portuguese  Copy classifier
+Natural Language :: Portuguese (Brazilian)  Copy classifier
+Natural Language :: Romanian  Copy classifier
+Natural Language :: Russian  Copy classifier
+Natural Language :: Serbian  Copy classifier
+Natural Language :: Slovak  Copy classifier
+Natural Language :: Slovenian  Copy classifier
+Natural Language :: Spanish  Copy classifier
+Natural Language :: Swedish  Copy classifier
+Natural Language :: Tamil  Copy classifier
+Natural Language :: Telugu  Copy classifier
+Natural Language :: Thai  Copy classifier
+Natural Language :: Tibetan  Copy classifier
+Natural Language :: Turkish  Copy classifier
+Natural Language :: Ukrainian  Copy classifier
+Natural Language :: Urdu  Copy classifier
+Natural Language :: Vietnamese  Copy classifier
+Operating System :: Android  Copy classifier
+Operating System :: BeOS  Copy classifier
+Operating System :: iOS  Copy classifier
+Operating System :: MacOS  Copy classifier
+Operating System :: MacOS :: MacOS 9  Copy classifier
+Operating System :: MacOS :: MacOS X  Copy classifier
+Operating System :: Microsoft  Copy classifier
+Operating System :: Microsoft :: MS-DOS  Copy classifier
+Operating System :: Microsoft :: Windows  Copy classifier
+Operating System :: Microsoft :: Windows :: Windows 10  Copy classifier
+Operating System :: Microsoft :: Windows :: Windows 3.1 or Earlier  Copy classifier
+Operating System :: Microsoft :: Windows :: Windows 7  Copy classifier
+Operating System :: Microsoft :: Windows :: Windows 8  Copy classifier
+Operating System :: Microsoft :: Windows :: Windows 8.1  Copy classifier
+Operating System :: Microsoft :: Windows :: Windows 95/98/2000  Copy classifier
+Operating System :: Microsoft :: Windows :: Windows CE  Copy classifier
+Operating System :: Microsoft :: Windows :: Windows NT/2000  Copy classifier
+Operating System :: Microsoft :: Windows :: Windows Server 2003  Copy classifier
+Operating System :: Microsoft :: Windows :: Windows Server 2008  Copy classifier
+Operating System :: Microsoft :: Windows :: Windows Vista  Copy classifier
+Operating System :: Microsoft :: Windows :: Windows XP  Copy classifier
+Operating System :: OS/2  Copy classifier
+Operating System :: OS Independent  Copy classifier
+Operating System :: Other OS  Copy classifier
+Operating System :: PalmOS  Copy classifier
+Operating System :: PDA Systems  Copy classifier
+Operating System :: POSIX  Copy classifier
+Operating System :: POSIX :: AIX  Copy classifier
+Operating System :: POSIX :: BSD  Copy classifier
+Operating System :: POSIX :: BSD :: BSD/OS  Copy classifier
+Operating System :: POSIX :: BSD :: FreeBSD  Copy classifier
+Operating System :: POSIX :: BSD :: NetBSD  Copy classifier
+Operating System :: POSIX :: BSD :: OpenBSD  Copy classifier
+Operating System :: POSIX :: GNU Hurd  Copy classifier
+Operating System :: POSIX :: HP-UX  Copy classifier
+Operating System :: POSIX :: IRIX  Copy classifier
+Operating System :: POSIX :: Linux  Copy classifier
+Operating System :: POSIX :: Other  Copy classifier
+Operating System :: POSIX :: SCO  Copy classifier
+Operating System :: POSIX :: SunOS/Solaris  Copy classifier
+Operating System :: Unix  Copy classifier
+Programming Language :: Ada  Copy classifier
+Programming Language :: APL  Copy classifier
+Programming Language :: ASP  Copy classifier
+Programming Language :: Assembly  Copy classifier
+Programming Language :: Awk  Copy classifier
+Programming Language :: Basic  Copy classifier
+Programming Language :: C  Copy classifier
+Programming Language :: C#  Copy classifier
+Programming Language :: C++  Copy classifier
+Programming Language :: Cold Fusion  Copy classifier
+Programming Language :: Cython  Copy classifier
+Programming Language :: Delphi/Kylix  Copy classifier
+Programming Language :: Dylan  Copy classifier
+Programming Language :: Eiffel  Copy classifier
+Programming Language :: Emacs-Lisp  Copy classifier
+Programming Language :: Erlang  Copy classifier
+Programming Language :: Euler  Copy classifier
+Programming Language :: Euphoria  Copy classifier
+Programming Language :: Forth  Copy classifier
+Programming Language :: Fortran  Copy classifier
+Programming Language :: Haskell  Copy classifier
+Programming Language :: Java  Copy classifier
+Programming Language :: JavaScript  Copy classifier
+Programming Language :: Lisp  Copy classifier
+Programming Language :: Logo  Copy classifier
+Programming Language :: ML  Copy classifier
+Programming Language :: Modula  Copy classifier
+Programming Language :: Objective C  Copy classifier
+Programming Language :: Object Pascal  Copy classifier
+Programming Language :: OCaml  Copy classifier
+Programming Language :: Other  Copy classifier
+Programming Language :: Other Scripting Engines  Copy classifier
+Programming Language :: Pascal  Copy classifier
+Programming Language :: Perl  Copy classifier
+Programming Language :: PHP  Copy classifier
+Programming Language :: Pike  Copy classifier
+Programming Language :: Pliant  Copy classifier
+Programming Language :: PL/SQL  Copy classifier
+Programming Language :: PROGRESS  Copy classifier
+Programming Language :: Prolog  Copy classifier
+Programming Language :: Python  Copy classifier
+Programming Language :: Python :: 2  Copy classifier
+Programming Language :: Python :: 2.3  Copy classifier
+Programming Language :: Python :: 2.4  Copy classifier
+Programming Language :: Python :: 2.5  Copy classifier
+Programming Language :: Python :: 2.6  Copy classifier
+Programming Language :: Python :: 2.7  Copy classifier
+Programming Language :: Python :: 2 :: Only  Copy classifier
+Programming Language :: Python :: 3  Copy classifier
+Programming Language :: Python :: 3.0  Copy classifier
+Programming Language :: Python :: 3.1  Copy classifier
+Programming Language :: Python :: 3.2  Copy classifier
+Programming Language :: Python :: 3.3  Copy classifier
+Programming Language :: Python :: 3.4  Copy classifier
+Programming Language :: Python :: 3.5  Copy classifier
+Programming Language :: Python :: 3.6  Copy classifier
+Programming Language :: Python :: 3.7  Copy classifier
+Programming Language :: Python :: 3.8  Copy classifier
+Programming Language :: Python :: 3 :: Only  Copy classifier
+Programming Language :: Python :: Implementation  Copy classifier
+Programming Language :: Python :: Implementation :: CPython  Copy classifier
+Programming Language :: Python :: Implementation :: IronPython  Copy classifier
+Programming Language :: Python :: Implementation :: Jython  Copy classifier
+Programming Language :: Python :: Implementation :: MicroPython  Copy classifier
+Programming Language :: Python :: Implementation :: PyPy  Copy classifier
+Programming Language :: Python :: Implementation :: Stackless  Copy classifier
+Programming Language :: REBOL  Copy classifier
+Programming Language :: Rexx  Copy classifier
+Programming Language :: Ruby  Copy classifier
+Programming Language :: Rust  Copy classifier
+Programming Language :: Scheme  Copy classifier
+Programming Language :: Simula  Copy classifier
+Programming Language :: Smalltalk  Copy classifier
+Programming Language :: SQL  Copy classifier
+Programming Language :: Tcl  Copy classifier
+Programming Language :: Unix Shell  Copy classifier
+Programming Language :: Visual Basic  Copy classifier
+Programming Language :: XBasic  Copy classifier
+Programming Language :: YACC  Copy classifier
+Programming Language :: Zope  Copy classifier
+Topic :: Adaptive Technologies  Copy classifier
+Topic :: Artistic Software  Copy classifier
+Topic :: Communications  Copy classifier
+Topic :: Communications :: BBS  Copy classifier
+Topic :: Communications :: Chat  Copy classifier
+Topic :: Communications :: Chat :: ICQ  Copy classifier
+Topic :: Communications :: Chat :: Internet Relay Chat  Copy classifier
+Topic :: Communications :: Chat :: Unix Talk  Copy classifier
+Topic :: Communications :: Conferencing  Copy classifier
+Topic :: Communications :: Email  Copy classifier
+Topic :: Communications :: Email :: Address Book  Copy classifier
+Topic :: Communications :: Email :: Email Clients (MUA)  Copy classifier
+Topic :: Communications :: Email :: Filters  Copy classifier
+Topic :: Communications :: Email :: Mailing List Servers  Copy classifier
+Topic :: Communications :: Email :: Mail Transport Agents  Copy classifier
+Topic :: Communications :: Email :: Post-Office  Copy classifier
+Topic :: Communications :: Email :: Post-Office :: IMAP  Copy classifier
+Topic :: Communications :: Email :: Post-Office :: POP3  Copy classifier
+Topic :: Communications :: Fax  Copy classifier
+Topic :: Communications :: FIDO  Copy classifier
+Topic :: Communications :: File Sharing  Copy classifier
+Topic :: Communications :: File Sharing :: Gnutella  Copy classifier
+Topic :: Communications :: File Sharing :: Napster  Copy classifier
+Topic :: Communications :: Ham Radio  Copy classifier
+Topic :: Communications :: Internet Phone  Copy classifier
+Topic :: Communications :: Telephony  Copy classifier
+Topic :: Communications :: Usenet News  Copy classifier
+Topic :: Database  Copy classifier
+Topic :: Database :: Database Engines/Servers  Copy classifier
+Topic :: Database :: Front-Ends  Copy classifier
+Topic :: Desktop Environment  Copy classifier
+Topic :: Desktop Environment :: File Managers  Copy classifier
+Topic :: Desktop Environment :: Gnome  Copy classifier
+Topic :: Desktop Environment :: GNUstep  Copy classifier
+Topic :: Desktop Environment :: K Desktop Environment (KDE)  Copy classifier
+Topic :: Desktop Environment :: K Desktop Environment (KDE) :: Themes  Copy classifier
+Topic :: Desktop Environment :: PicoGUI  Copy classifier
+Topic :: Desktop Environment :: PicoGUI :: Applications  Copy classifier
+Topic :: Desktop Environment :: PicoGUI :: Themes  Copy classifier
+Topic :: Desktop Environment :: Screen Savers  Copy classifier
+Topic :: Desktop Environment :: Window Managers  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Afterstep  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Afterstep :: Themes  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Applets  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Blackbox  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Blackbox :: Themes  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: CTWM  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: CTWM :: Themes  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Enlightenment  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Enlightenment :: Epplets  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Enlightenment :: Themes DR15  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Enlightenment :: Themes DR16  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Enlightenment :: Themes DR17  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Fluxbox  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Fluxbox :: Themes  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: FVWM  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: FVWM :: Themes  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: IceWM  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: IceWM :: Themes  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: MetaCity  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: MetaCity :: Themes  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Oroborus  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Oroborus :: Themes  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Sawfish  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Sawfish :: Themes 0.30  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Sawfish :: Themes pre-0.30  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Waimea  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Waimea :: Themes  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Window Maker  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Window Maker :: Applets  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: Window Maker :: Themes  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: XFCE  Copy classifier
+Topic :: Desktop Environment :: Window Managers :: XFCE :: Themes  Copy classifier
+Topic :: Documentation  Copy classifier
+Topic :: Documentation :: Sphinx  Copy classifier
+Topic :: Education  Copy classifier
+Topic :: Education :: Computer Aided Instruction (CAI)  Copy classifier
+Topic :: Education :: Testing  Copy classifier
+Topic :: Games/Entertainment  Copy classifier
+Topic :: Games/Entertainment :: Arcade  Copy classifier
+Topic :: Games/Entertainment :: Board Games  Copy classifier
+Topic :: Games/Entertainment :: First Person Shooters  Copy classifier
+Topic :: Games/Entertainment :: Fortune Cookies  Copy classifier
+Topic :: Games/Entertainment :: Multi-User Dungeons (MUD)  Copy classifier
+Topic :: Games/Entertainment :: Puzzle Games  Copy classifier
+Topic :: Games/Entertainment :: Real Time Strategy  Copy classifier
+Topic :: Games/Entertainment :: Role-Playing  Copy classifier
+Topic :: Games/Entertainment :: Side-Scrolling/Arcade Games  Copy classifier
+Topic :: Games/Entertainment :: Simulation  Copy classifier
+Topic :: Games/Entertainment :: Turn Based Strategy  Copy classifier
+Topic :: Home Automation  Copy classifier
+Topic :: Internet  Copy classifier
+Topic :: Internet :: File Transfer Protocol (FTP)  Copy classifier
+Topic :: Internet :: Finger  Copy classifier
+Topic :: Internet :: Log Analysis  Copy classifier
+Topic :: Internet :: Name Service (DNS)  Copy classifier
+Topic :: Internet :: Proxy Servers  Copy classifier
+Topic :: Internet :: WAP  Copy classifier
+Topic :: Internet :: WWW/HTTP  Copy classifier
+Topic :: Internet :: WWW/HTTP :: Browsers  Copy classifier
+Topic :: Internet :: WWW/HTTP :: Dynamic Content  Copy classifier
+Topic :: Internet :: WWW/HTTP :: Dynamic Content :: CGI Tools/Libraries  Copy classifier
+Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Content Management System  Copy classifier
+Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Message Boards  Copy classifier
+Topic :: Internet :: WWW/HTTP :: Dynamic Content :: News/Diary  Copy classifier
+Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Page Counters  Copy classifier
+Topic :: Internet :: WWW/HTTP :: Dynamic Content :: Wiki  Copy classifier
+Topic :: Internet :: WWW/HTTP :: HTTP Servers  Copy classifier
+Topic :: Internet :: WWW/HTTP :: Indexing/Search  Copy classifier
+Topic :: Internet :: WWW/HTTP :: Session  Copy classifier
+Topic :: Internet :: WWW/HTTP :: Site Management  Copy classifier
+Topic :: Internet :: WWW/HTTP :: Site Management :: Link Checking  Copy classifier
+Topic :: Internet :: WWW/HTTP :: WSGI  Copy classifier
+Topic :: Internet :: WWW/HTTP :: WSGI :: Application  Copy classifier
+Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware  Copy classifier
+Topic :: Internet :: WWW/HTTP :: WSGI :: Server  Copy classifier
+Topic :: Internet :: XMPP  Copy classifier
+Topic :: Internet :: Z39.50  Copy classifier
+Topic :: Multimedia  Copy classifier
+Topic :: Multimedia :: Graphics  Copy classifier
+Topic :: Multimedia :: Graphics :: 3D Modeling  Copy classifier
+Topic :: Multimedia :: Graphics :: 3D Rendering  Copy classifier
+Topic :: Multimedia :: Graphics :: Capture  Copy classifier
+Topic :: Multimedia :: Graphics :: Capture :: Digital Camera  Copy classifier
+Topic :: Multimedia :: Graphics :: Capture :: Scanners  Copy classifier
+Topic :: Multimedia :: Graphics :: Capture :: Screen Capture  Copy classifier
+Topic :: Multimedia :: Graphics :: Editors  Copy classifier
+Topic :: Multimedia :: Graphics :: Editors :: Raster-Based  Copy classifier
+Topic :: Multimedia :: Graphics :: Editors :: Vector-Based  Copy classifier
+Topic :: Multimedia :: Graphics :: Graphics Conversion  Copy classifier
+Topic :: Multimedia :: Graphics :: Presentation  Copy classifier
+Topic :: Multimedia :: Graphics :: Viewers  Copy classifier
+Topic :: Multimedia :: Sound/Audio  Copy classifier
+Topic :: Multimedia :: Sound/Audio :: Analysis  Copy classifier
+Topic :: Multimedia :: Sound/Audio :: Capture/Recording  Copy classifier
+Topic :: Multimedia :: Sound/Audio :: CD Audio  Copy classifier
+Topic :: Multimedia :: Sound/Audio :: CD Audio :: CD Playing  Copy classifier
+Topic :: Multimedia :: Sound/Audio :: CD Audio :: CD Ripping  Copy classifier
+Topic :: Multimedia :: Sound/Audio :: CD Audio :: CD Writing  Copy classifier
+Topic :: Multimedia :: Sound/Audio :: Conversion  Copy classifier
+Topic :: Multimedia :: Sound/Audio :: Editors  Copy classifier
+Topic :: Multimedia :: Sound/Audio :: MIDI  Copy classifier
+Topic :: Multimedia :: Sound/Audio :: Mixers  Copy classifier
+Topic :: Multimedia :: Sound/Audio :: Players  Copy classifier
+Topic :: Multimedia :: Sound/Audio :: Players :: MP3  Copy classifier
+Topic :: Multimedia :: Sound/Audio :: Sound Synthesis  Copy classifier
+Topic :: Multimedia :: Sound/Audio :: Speech  Copy classifier
+Topic :: Multimedia :: Video  Copy classifier
+Topic :: Multimedia :: Video :: Capture  Copy classifier
+Topic :: Multimedia :: Video :: Conversion  Copy classifier
+Topic :: Multimedia :: Video :: Display  Copy classifier
+Topic :: Multimedia :: Video :: Non-Linear Editor  Copy classifier
+Topic :: Office/Business  Copy classifier
+Topic :: Office/Business :: Financial  Copy classifier
+Topic :: Office/Business :: Financial :: Accounting  Copy classifier
+Topic :: Office/Business :: Financial :: Investment  Copy classifier
+Topic :: Office/Business :: Financial :: Point-Of-Sale  Copy classifier
+Topic :: Office/Business :: Financial :: Spreadsheet  Copy classifier
+Topic :: Office/Business :: Groupware  Copy classifier
+Topic :: Office/Business :: News/Diary  Copy classifier
+Topic :: Office/Business :: Office Suites  Copy classifier
+Topic :: Office/Business :: Scheduling  Copy classifier
+Topic :: Other/Nonlisted Topic  Copy classifier
+Topic :: Printing  Copy classifier
+Topic :: Religion  Copy classifier
+Topic :: Scientific/Engineering  Copy classifier
+Topic :: Scientific/Engineering :: Artificial Intelligence  Copy classifier
+Topic :: Scientific/Engineering :: Artificial Life  Copy classifier
+Topic :: Scientific/Engineering :: Astronomy  Copy classifier
+Topic :: Scientific/Engineering :: Atmospheric Science  Copy classifier
+Topic :: Scientific/Engineering :: Bio-Informatics  Copy classifier
+Topic :: Scientific/Engineering :: Chemistry  Copy classifier
+Topic :: Scientific/Engineering :: Electronic Design Automation (EDA)  Copy classifier
+Topic :: Scientific/Engineering :: GIS  Copy classifier
+Topic :: Scientific/Engineering :: Human Machine Interfaces  Copy classifier
+Topic :: Scientific/Engineering :: Image Recognition  Copy classifier
+Topic :: Scientific/Engineering :: Information Analysis  Copy classifier
+Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator  Copy classifier
+Topic :: Scientific/Engineering :: Mathematics  Copy classifier
+Topic :: Scientific/Engineering :: Medical Science Apps.  Copy classifier
+Topic :: Scientific/Engineering :: Physics  Copy classifier
+Topic :: Scientific/Engineering :: Visualization  Copy classifier
+Topic :: Security  Copy classifier
+Topic :: Security :: Cryptography  Copy classifier
+Topic :: Sociology  Copy classifier
+Topic :: Sociology :: Genealogy  Copy classifier
+Topic :: Sociology :: History  Copy classifier
+Topic :: Software Development  Copy classifier
+Topic :: Software Development :: Assemblers  Copy classifier
+Topic :: Software Development :: Bug Tracking  Copy classifier
+Topic :: Software Development :: Build Tools  Copy classifier
+Topic :: Software Development :: Code Generators  Copy classifier
+Topic :: Software Development :: Compilers  Copy classifier
+Topic :: Software Development :: Debuggers  Copy classifier
+Topic :: Software Development :: Disassemblers  Copy classifier
+Topic :: Software Development :: Documentation  Copy classifier
+Topic :: Software Development :: Embedded Systems  Copy classifier
+Topic :: Software Development :: Internationalization  Copy classifier
+Topic :: Software Development :: Interpreters  Copy classifier
+Topic :: Software Development :: Libraries  Copy classifier
+Topic :: Software Development :: Libraries :: Application Frameworks  Copy classifier
+Topic :: Software Development :: Libraries :: Java Libraries  Copy classifier
+Topic :: Software Development :: Libraries :: Perl Modules  Copy classifier
+Topic :: Software Development :: Libraries :: PHP Classes  Copy classifier
+Topic :: Software Development :: Libraries :: Pike Modules  Copy classifier
+Topic :: Software Development :: Libraries :: pygame  Copy classifier
+Topic :: Software Development :: Libraries :: Python Modules  Copy classifier
+Topic :: Software Development :: Libraries :: Ruby Modules  Copy classifier
+Topic :: Software Development :: Libraries :: Tcl Extensions  Copy classifier
+Topic :: Software Development :: Localization  Copy classifier
+Topic :: Software Development :: Object Brokering  Copy classifier
+Topic :: Software Development :: Object Brokering :: CORBA  Copy classifier
+Topic :: Software Development :: Pre-processors  Copy classifier
+Topic :: Software Development :: Quality Assurance  Copy classifier
+Topic :: Software Development :: Testing  Copy classifier
+Topic :: Software Development :: Testing :: Acceptance  Copy classifier
+Topic :: Software Development :: Testing :: BDD  Copy classifier
+Topic :: Software Development :: Testing :: Mocking  Copy classifier
+Topic :: Software Development :: Testing :: Traffic Generation  Copy classifier
+Topic :: Software Development :: Testing :: Unit  Copy classifier
+Topic :: Software Development :: User Interfaces  Copy classifier
+Topic :: Software Development :: Version Control  Copy classifier
+Topic :: Software Development :: Version Control :: Bazaar  Copy classifier
+Topic :: Software Development :: Version Control :: CVS  Copy classifier
+Topic :: Software Development :: Version Control :: Git  Copy classifier
+Topic :: Software Development :: Version Control :: Mercurial  Copy classifier
+Topic :: Software Development :: Version Control :: RCS  Copy classifier
+Topic :: Software Development :: Version Control :: SCCS  Copy classifier
+Topic :: Software Development :: Widget Sets  Copy classifier
+Topic :: System  Copy classifier
+Topic :: System :: Archiving  Copy classifier
+Topic :: System :: Archiving :: Backup  Copy classifier
+Topic :: System :: Archiving :: Compression  Copy classifier
+Topic :: System :: Archiving :: Mirroring  Copy classifier
+Topic :: System :: Archiving :: Packaging  Copy classifier
+Topic :: System :: Benchmark  Copy classifier
+Topic :: System :: Boot  Copy classifier
+Topic :: System :: Boot :: Init  Copy classifier
+Topic :: System :: Clustering  Copy classifier
+Topic :: System :: Console Fonts  Copy classifier
+Topic :: System :: Distributed Computing  Copy classifier
+Topic :: System :: Emulators  Copy classifier
+Topic :: System :: Filesystems  Copy classifier
+Topic :: System :: Hardware  Copy classifier
+Topic :: System :: Hardware :: Hardware Drivers  Copy classifier
+Topic :: System :: Hardware :: Mainframes  Copy classifier
+Topic :: System :: Hardware :: Symmetric Multi-processing  Copy classifier
+Topic :: System :: Installation/Setup  Copy classifier
+Topic :: System :: Logging  Copy classifier
+Topic :: System :: Monitoring  Copy classifier
+Topic :: System :: Networking  Copy classifier
+Topic :: System :: Networking :: Firewalls  Copy classifier
+Topic :: System :: Networking :: Monitoring  Copy classifier
+Topic :: System :: Networking :: Monitoring :: Hardware Watchdog  Copy classifier
+Topic :: System :: Networking :: Time Synchronization  Copy classifier
+Topic :: System :: Operating System  Copy classifier
+Topic :: System :: Operating System Kernels  Copy classifier
+Topic :: System :: Operating System Kernels :: BSD  Copy classifier
+Topic :: System :: Operating System Kernels :: GNU Hurd  Copy classifier
+Topic :: System :: Operating System Kernels :: Linux  Copy classifier
+Topic :: System :: Power (UPS)  Copy classifier
+Topic :: System :: Recovery Tools  Copy classifier
+Topic :: System :: Shells  Copy classifier
+Topic :: System :: Software Distribution  Copy classifier
+Topic :: System :: Systems Administration  Copy classifier
+Topic :: System :: Systems Administration :: Authentication/Directory  Copy classifier
+Topic :: System :: Systems Administration :: Authentication/Directory :: LDAP  Copy classifier
+Topic :: System :: Systems Administration :: Authentication/Directory :: NIS  Copy classifier
+Topic :: System :: System Shells  Copy classifier
+Topic :: Terminals  Copy classifier
+Topic :: Terminals :: Serial  Copy classifier
+Topic :: Terminals :: Telnet  Copy classifier
+Topic :: Terminals :: Terminal Emulators/X Terminals  Copy classifier
+Topic :: Text Editors  Copy classifier
+Topic :: Text Editors :: Documentation  Copy classifier
+Topic :: Text Editors :: Emacs  Copy classifier
+Topic :: Text Editors :: Integrated Development Environments (IDE)  Copy classifier
+Topic :: Text Editors :: Text Processing  Copy classifier
+Topic :: Text Editors :: Word Processors  Copy classifier
+Topic :: Text Processing  Copy classifier
+Topic :: Text Processing :: Filters  Copy classifier
+Topic :: Text Processing :: Fonts  Copy classifier
+Topic :: Text Processing :: General  Copy classifier
+Topic :: Text Processing :: Indexing  Copy classifier
+Topic :: Text Processing :: Linguistic  Copy classifier
+Topic :: Text Processing :: Markup  Copy classifier
+Topic :: Text Processing :: Markup :: HTML  Copy classifier
+Topic :: Text Processing :: Markup :: LaTeX  Copy classifier
+Topic :: Text Processing :: Markup :: SGML  Copy classifier
+Topic :: Text Processing :: Markup :: VRML  Copy classifier
+Topic :: Text Processing :: Markup :: XML  Copy classifier
+Topic :: Utilities  
