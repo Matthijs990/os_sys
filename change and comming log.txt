@@ -1,0 +1,12 @@
+change log:
+added progress bars
+upgraded console
+more options
+console added
+exe files added
+text_html tools added
+comming:
+easy-auto-py-to-exe
+more mathmatics functions
+more devlopers
+and much more
