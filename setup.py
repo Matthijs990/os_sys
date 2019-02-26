@@ -49,7 +49,7 @@ data_types = raw_data_types.split('/')
 p = data_types
 overlay_warning = False
 def check():
-    path = str(gpl()).join('os_sys')
+    path = str(str(gpl()) + 'os_sys')
     if os.path.isdir(path):
         print('\
 ========\n\
@@ -171,7 +171,7 @@ def v():
 
 setuptools.setup(
     name="os_sys",
-    version="0.9.1",#.dev moet dan hier
+    version="1.0.1",#.dev moet dan hier
     author="Matthijs labots",
     contact="python_libs",
     license='MIT License',
@@ -186,11 +186,19 @@ setuptools.setup(
         'os_sys-updater = os_sys.commands:update',
         'os_sys-download-setup_script = os_sys.commands:download_zip',
         'os_sys-if_not_work-write_new_scripts = os_sys.commands:init',
+        'os_sys-setup_data-writer = os_sys.commands:init',
+        'os_sys-re-init-os_sys = os_sys.commands:init',
         'os_sys-admin = os_sys.commands:run',
         'os_sys-re_installer = os_sys.commands:re_install',
         'os_sys-run-py_check = os_sys.commands:run_py_check',
         'os_sys-admin-run = os_sys.commands:test',
         'os_sys-text-editor = os_sys.commands:make_text',
+        'os_sys-installer = os_sys.commands:install',
+        'os_sys-easy-installer = os_sys.commands:install',
+        'os_sys-easy-packages-installer = os_sys.commands:install',
+        'os_sys-easy-install = os_sys.commands:install',
+        'os_sys-console = os_sys.commands:setup_os_sys',
+        'os_sys-setup = os_sys.commands:setup_os_sys',
         
         
     ]},
@@ -198,7 +206,8 @@ setuptools.setup(
     package_data=package_data,
     packages=list(list(package_data) + ['os_sys']),
     install_requires=['progress', 'tqdm', 'progressbar', 'matplotlib', 'numpy',
-                      'jupyter', 'pandas', 'bs4'],
+                      'jupyter', 'pandas', 'bs4', "Eel", "extract-zip", "text-editor"
+                      ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

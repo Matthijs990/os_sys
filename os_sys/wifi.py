@@ -3,12 +3,11 @@ import socket
 import socket as s
 from time import *
 import time as _time
-import fail as f
 __all__ = ['info', 'is_connected', 'ping', 'connect_time', 'internet', 'chek_speed', 'internet_and_speed', 'cmd_ping', 'cmd', 'ping_data', 'filter_regel']
 
 def info():
     
-    '''this is a lib where you can chek or test your wifi if you need commands:
+    '''this is a lib where you can chek or test your wifi if you need the commands are:
     is_connected() = looks for you of your wifi is connected
     sub() = pings your wifi 8 times and returns the results
     ping() = pings your wifi one time to chek your connection
@@ -155,7 +154,7 @@ def ping_data(aantal, taak):
         if Exception:
             
             if not get_it == False:
-                faal = faal - 1
+                faal = faal + 1
         if not get_it == False:
 
             re = re_end - restart
@@ -195,7 +194,7 @@ def ping_data(aantal, taak):
         print('percentage that has not been lost: ' + str(procent) + '%')
         print('percentage that has been lost: ' + str(n_procent) + '%')
     return [max_time, min_time, middel, totaal, procent, n_procent, aantal, int(aantal - faal), tt]
-
+ping_data(1000, "print")
 def filter_regel(zinig):
     if not zinig == str:
         zinig = str(zinig)

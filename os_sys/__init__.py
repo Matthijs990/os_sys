@@ -2,9 +2,14 @@
 import os
 import sys
 
+import requests
+
 
 __all__ = ['os_sys', 'fail', 'modules', 'system', 'wifi', 'programs', 'test', 'code', 'decode', 'discription', '_code', 'more_input', 'all_dict', 'download',
-           'obj_type', 'object_type', 'show_progress', 'update_progress', 'progress_bar_loading', 'tqdm', 'progress_types', 'bar', 'tqdm_gui', 'gui_bar']
+           'obj_type', 'object_type', 'show_progress', 'update_progress', 'progress_bar_loading', 'tqdm', 'progress_types', 'bar', 'tqdm_gui', 'gui_bar',
+           'bar', 'charging_bar', 'filling_sqares_bar', 'filling_circles_bar', 'incremental_bar', 'pixel_bar',
+           'shady_bar', 'spinner', 'pie_spinner', 'moon_spinner', 'line_spinner', 'pixel_spinner',
+           'counter', 'countdown', 'stack', 'pie', 'life']
 __fail__ = ['warn_return', 'make_warn', 'print_warn', 'warn_msg', 'warning_msg', 'warn_file_no', 'msg', 'module_warn', 'text_warn']
 __os_sys__ = ['main_dir', 'get_import_list', 'get_user', 'cmd', 'info', 'win_version', 'cmd_filter_haak', 'filter_regel', 'cmd_out_list',
            'cmd_out', 'ColorPrint', 'info', 'is_connected', 'ping', 'connect_time', 'internet',
@@ -12,6 +17,18 @@ __os_sys__ = ['main_dir', 'get_import_list', 'get_user', 'cmd', 'info', 'win_ver
            'ping_data', 'replace', 'open_site', 'explorer_dict', 'explorer',
            'is_even', 'is_oneven', 'fahr_to_celsius', 'celsius_to_kelvin', 'fahr_to_kelvin', 'convert_c_to_f'
            ]
+def _download(url, file, path=None):
+    url = url  
+    r = requests.get(url)
+    
+    
+    import os
+    if not path == None:
+        filepath = os.path.join(path, file)
+    else:
+        filepath = file
+    with open(str(filepath), 'wb') as f:  
+        f.write(r.content)
 __all_names__ = __os_sys__
 fail_ = __fail__
 __all = []
@@ -278,20 +295,20 @@ class progress_bar_loading(threading.Thread):
     def run(self):
             global stop
             global kill
-            print('Loading....  ')
-            sys.stdout.flush()
+            print('Loading....  ', file=sys.stderr)
+            sys.stderr.flush()
             i = 0
             while stop != True:
                     if (i%4) == 0: 
-                        sys.stdout.write('\b')
+                        sys.stderr.write('\b')
                     elif (i%4) == 1: 
                         sys.stdout.write('\b')
                     elif (i%4) == 2: 
-                        sys.stdout.write('\b')
+                        sys.stderr.write('\b')
                     elif (i%4) == 3: 
                         sys.stdout.write('\b')
 
-                    sys.stdout.flush()
+                    sys.stderr.flush()
                     time.sleep(0.2)
                     i+=1
 
@@ -381,30 +398,20 @@ bar = progress_bar_loading()
 if __name__ == '__main__':
     test()
 try:
-    from . import fail, modules, system, wifi, programs, test, os_sys, errors, discription, progress_bars, _progress as progress
+    from . import _progress as progress
 except ImportError:
     pass
     try:
-        from os_sys import fail, modules, system, wifi, programs, test, os_sys, errors, discription, progress_bars, _progress as progress
+        from os_sys import _progress as progress
     except Exception:
         pass
-        import fail, modules, system, wifi, programs, test, os_sys, errors, discription, progress_bars, _progress as progress
+        try:
+            
+            import _progress as progress
+        except Exception:
+            pass
         
-fail = fail
-modules = modules
-system = system
-wifi = wifi
-programs = programs
-test = test
-os_sys = os_sys
-errors = errors
-discription = discription
-decode = discription
-code = discription
-progress_bar = progress_bars
-progres_bar = progress_bars
-progress = progress
-progres = progress
+
 def bar(rn, fill='.'):
     import time
 
@@ -452,3 +459,38 @@ if __name__ == '__main__':
         bar.next()
         print('')
     bar.finish()
+
+def get_newest_version():
+    from bs4 import BeautifulSoup
+
+    url = "https://pypi.org/project/os-sys/"
+    html = str(requests.get(url).content)
+    soup = BeautifulSoup(html)
+
+    # kill all script and style elements
+    for script in soup(["script", "style"]):
+        script.extract()    # rip it out
+
+    # get text
+    text = soup.get_text()
+
+    # break into lines and remove leading and trailing space on each
+    lines = (line.strip() for line in text.splitlines())
+    # break multi-headlines into a line each
+    chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+    # drop blank lines
+    text = '\n'.join(chunk for chunk in chunks if chunk)
+    print(text)
+    text = text.replace('\\n', '\n')
+    text = str(text)
+    line = text.split('\n')
+    for l in line:
+        l = l.rstrip('\n')
+        try:
+            name, etc = l.split(' ')
+        except:
+            pass
+        else:
+            if 'os-sys' in name:
+                return etc
+

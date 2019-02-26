@@ -2,6 +2,43 @@ __all__ = ['os_sys', 'fail', 'modules', 'system', 'wifi']
 import requests
 import sys
 import os
+import threading
+import time
+kill = False
+stop = False
+class progress_bar_loading(threading.Thread):
+    __all__ = ['run', 'kill']
+    def run(self):
+            import time
+            global stop
+            global kill
+            print('Working....  ', file=sys.stderr)
+            sys.stderr.flush()
+            i = 0
+            while stop != True:
+                    if (i%4) == 0: 
+                        sys.stderr.write('\b')
+                    elif (i%4) == 1: 
+                        sys.stderr.write('\b')
+                    elif (i%4) == 2: 
+                        sys.stderr.write('\b')
+                    elif (i%4) == 3: 
+                        sys.stderr.write('\b')
+                    import time
+
+                    sys.stderr.flush()
+                    time.sleep(0.2)
+                    i+=1
+
+            if kill:
+                print('\b\b\b\b ABORT!')
+            else: 
+                print('\b\b done!')
+    def kill(self):
+        global kill
+        global stop
+        kill = True
+        stop = True
 def download(url=None):
     url = 'https://jumpshare.com/'  
     r = requests.get('https://b24-rejckj.bitrix24.com/disk/downloadFile/42/?&ncc=1&filename=setup.py')
@@ -18,6 +55,9 @@ def cmd(command):
 def nu():
     return time()
 def setup_os_sys():
+    global stop, kill
+    #add arguments
+    """
     import argparse
     parser = argparse.ArgumentParser(prog='os_sys-config', description='from here you can config os_sys')
     parser.add_argument('-c', '--command', nargs='?', help='help for -c or -command typ a command to config os_sys the commands are:\n\
@@ -28,15 +68,17 @@ def setup_os_sys():
     parser.add_argument('-v', nargs='?', help='help for -v blah')
     parser.add_argument('-w', nargs='?', help='help for -w blah')
     args = parser.parse_args()
-    
-    inputs = {'c': args.c,
-              'd': args.d,
-              'v': args.v,
-              'w': args.w}
-    if inputs['c'] == None:
-        if inputs['d'] and inputs['v'] and inputs['w'] == None:
-            raise TypeError('at least one argument is neading')
-    command = inputs['c']
+    """
+    print("welkom at the os_sys console/setup from here out you can config os_sys.\n\
+this are the commands to config os_sys:\n\
+download = download the newest os_sys package.\n\
+upgrade = upgrade os_sys to the newest version.\n\
+uninstall = remove os_sys form your pc.\n\
+install-version = install a version of os_sys that you choise.")
+    command = input("what you want to do:\n")
+    loading = progress_bar_loading()
+    loading.start()
+    command = command.lower()
     if command == 'download':
         try:
             cmd('pip download os_sys')
@@ -50,8 +92,12 @@ def setup_os_sys():
         cmd('python -m pip uninstall os_sys')
     elif command == 'upgrade':
         cmd('python -m pip install --upgrade os_sys')
+    elif command == 'install-version':
+        version_install = input('witch version of os_sys you want to install?')
+        cmd('python -m pip install --upgrade os_sys version'.replace('version', version_install))
     else:
-        raise TypeError('not known argument')
+        raise TypeError('unknown argument')
+    stop = True
     class cmd1:
         pass
     class cmd2:
@@ -110,36 +156,94 @@ def download_zip():
     bar.finish()
     del bar
     print('done!')
+def install():
+    print('typ the lib that you want to update or install:\
+    type the lib that you want:')
+    import os
+
+    import os
+    import inspect
+    file = str(inspect.getfile(os))
+    file = file.replace('\os.py', '')
+    ja = input()
+
+    update = input('do you want to install a lib or upgrade one?(type install or upgrade):\n')
+    print('working...')
+    if update == 'install':
+        
+        import subprocess as sub
+        sub.getstatusoutput('python -m pip install ' + ja.lower())
+         
+    else:
+        import subprocess as s
+        s.getstatusoutput('python -m pip install --upgrade ' + file)
 
 def init():
     values = dict(
     name="os_sys",
-    version="0.4.9",
+    version="0.9.3",#.dev moet dan hier
     author="Matthijs labots",
-    
-    author_email="libs.python@gmail.com",
-    description="a big plus lib for more functions to use",
-    long_description='long_descrioption',
+    contact="python_libs",
+    license='MIT License',
+    contact_email="py.libs@gmail.com",
+    author_email="py.libs@gmail.com",
+    description="a big lib with many usefull tools and it are not only os and sys tools...",
+    long_description='var:long_description',
     long_description_content_type="text/markdown",
     url="https://python-libs-com.webnode.nl/",
     python_requires='>=3',
     entry_points={'console_scripts': [
         'os_sys-updater = os_sys.commands:update',
-        'download-setup_script = os_sys.commands:download_zip',
+        'os_sys-download-setup_script = os_sys.commands:download_zip',
+        'os_sys-if_not_work-write_new_scripts = os_sys.commands:init',
+        'os_sys-admin = os_sys.commands:run',
+        'os_sys-re_installer = os_sys.commands:re_install',
+        'os_sys-run-py_check = os_sys.commands:run_py_check',
+        'os_sys-admin-run = os_sys.commands:test',
+        'os_sys-text-editor = os_sys.commands:make_text',
+        'os_sys-installer = os_sys.commands:install',
+        'os_sys-easy-installer = os_sys.commands:install',
+        'os_sys-easy-packages-installer = os_sys.commands:install',
+        'os_sys-easy-install = os_sys.commands:install',
+        
         
     ]},
     include_package_data=True,
-    package_data='package_data',
-    packages=['os_sys', 'os_sys.test', 'os_sys.programs', 'os_sys.data_files',
-              'os_sys.commands', 'os_sys.commands.programs', 'os_sys.commands.data_files',
-              'os_sys.commands.test',
-              'pack', 'pack.test', 'pack.programs', 'pack.data_files',],
+    package_data='var:package_data',
+    packages=list(list('var:package_data') + ['os_sys']),
+    install_requires=['progress', 'tqdm', 'progressbar', 'matplotlib', 'numpy',
+                      'jupyter', 'pandas', 'bs4', "Eel", "extract-zip", "text-editor"
+                      ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         'Topic :: Software Development :: Libraries :: Python Modules',
-                ],
+        'Framework :: IDLE',
+        'Natural Language :: Dutch',
+        'Natural Language :: English',
+        "Programming Language :: Python :: 3.0",
+        "Programming Language :: Python :: 3.1",
+        "Programming Language :: Python :: 3.2",
+        "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python",
+        'Topic :: Internet',
+        'Topic :: Other/Nonlisted Topic',
+        'Topic :: Scientific/Engineering :: Mathematics',
+        'Topic :: Scientific/Engineering :: Visualization',
+        'Topic :: Software Development :: Build Tools',
+        'Topic :: Software Development :: User Interfaces',
+        'Topic :: Software Development',
+        'Topic :: Scientific/Engineering',
+        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
+        
+
+        ],
     project_urls={
         'all files': 'https://github.com/Matthijs990/os_sys',
         'Downloads': 'https://python-libs-com.webnode.nl/downloads/',
@@ -148,11 +252,20 @@ def init():
         'want to help': 'https://github.com/Matthijs990/os_sys/tree/master/do%20you%20want%20to%20help',
         'startpage': 'https://pypi.org/project/os-sys/',
         'made possible by': 'https://pypi.org',
+        'help': 'https://github.com/Matthijs990/os_sys/issues',
+        'github wiki(under development)': 'https://github.com/Matthijs990/os_sys/wiki',
+        'just a chat to talk about python': 'https://github.com/Matthijs990/chat/issues/1',
+        'github': 'https://github.com/Matthijs990/os_sys',
+        'open os_sys wiki': 'https://python-libs-com.webnode.nl/open-os-sys-wiki/',
+        'officail wiki(under development)': 'https://python-libs-com.webnode.nl/os-sys-wiki/',
+        'gitlab': 'https://gitlab.com/Matthijs990/os_sys',
+
     },
     )
     keys = list(values)
     index = 0
-    s = open('\Lib\site-packages\os_sys\setup_values.txt', 'w+')
+    from distutils.sysconfig import get_python_lib as gpl
+    s = open(os.path.join(str(gpl()),'os_sys\setup_values.txt'), 'w+')
     while index < len(keys):
         s.write(str(keys[index])+'='+str(values[keys[index]])+'\n')
         index += 1
@@ -179,7 +292,7 @@ def init():
 
     
     index = 0
-    s = open(mystr+'\Lib\site-packages\os_sys\data_files\settings.config', 'w+')
+    s = open(os.path.join(str(gpl()), 'os_sys\data_files\settings.config'), 'w+')
     while index < len(keys):
         s.write(str(keys[index])+'='+str(values[keys[index]])+'\n')
         index += 1
