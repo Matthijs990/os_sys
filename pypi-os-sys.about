@@ -1,0 +1,442 @@
+license:
+
+
+    
+
+
+        include:
+
+            introduction
+            
+            sorry                                                                                  
+                
+            description                                                                                                                                                                    
+                
+            license(at the end)
+            home
+            loading_bars
+
+        introduction:
+
+
+            to install os_sys you type: pip install os_sys                                                                                  
+            to upgrade os_sys you type: pip install --upgrade os_sys                                                                                  
+            so lets get start to install os_sys                                                                                  
+
+        sorry:                                                                                  
+            i am dutch and i never had a mind about it while become this far so some commands are in dutch.                                                                                  
+            the most commands are english but sorry if you not understand some commands.                                                                                  
+            the most new packages and update's while be in english                                                                                  
+
+
+        license:
+            Copyright (c) 2018 The Python Packaging Authority
+
+            Permission is hereby granted, free of charge, to any person obtaining a copy
+            of this software and associated documentation files (the "Software"), to deal
+            in the Software without restriction, including without limitation the rights
+            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+            copies of the Software, and to permit persons to whom the Software is
+            furnished to do so, subject to the following conditions:
+
+            The above copyright notice and this permission notice shall be included in all
+            copies or substantial portions of the Software.
+
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+            SOFTWARE.
+        loading_bars:
+        Easy progress reporting for Python
+        ==================================
+
+        |pypi|
+
+
+
+        Bars
+        ----
+
+        There are 7 progress bars to choose from:
+
+        - ``Bar``
+        - ``ChargingBar``
+        - ``FillingSquaresBar``
+        - ``FillingCirclesBar``
+        - ``IncrementalBar``
+        - ``PixelBar``
+        - ``ShadyBar``
+
+        To use them, just call ``next`` to advance and ``finish`` to finish:
+
+        .. code-block:: python
+
+            from os_sys.progress import bar
+
+            bar = Bar('Processing', max=20)
+            for i in range(20):
+                # Do some work
+                bar.next()
+            bar.finish()
+
+        or use any bar of this class as a context manager:
+
+        .. code-block:: python
+
+            from os_sys.progress import bar
+
+            with Bar('Processing', max=20) as bar:
+                for i in range(20):
+                    # Do some work
+                    bar.next()
+
+        The result will be a bar like the following: ::
+
+            Processing |#############                   | 42/100
+
+        To simplify the common case where the work is done in an iterator, you can
+        use the ``iter`` method:
+
+        .. code-block:: python
+
+            for i in Bar('Processing').iter(it):
+                # Do some work
+
+        Progress bars are very customizable, you can change their width, their fill
+        character, their suffix and more:
+
+        .. code-block:: python
+
+            bar = Bar('Loading', fill='@', suffix='%(percent)d%%')
+
+        This will produce a bar like the following: ::
+
+            Loading |@@@@@@@@@@@@@                   | 42%
+
+        You can use a number of template arguments in ``message`` and ``suffix``:
+
+        ==========  ================================
+        Name        Value
+        ==========  ================================
+        index       current value
+        max         maximum value
+        remaining   max - index
+        progress    index / max
+        percent     progress * 100
+        avg         simple moving average time per item (in seconds)
+        elapsed     elapsed time in seconds
+        elapsed_td  elapsed as a timedelta (useful for printing as a string)
+        eta         avg * remaining
+        eta_td      eta as a timedelta (useful for printing as a string)
+        ==========  ================================
+
+        Instead of passing all configuration options on instatiation, you can create
+        your custom subclass:
+
+        .. code-block:: python
+
+            class FancyBar(Bar):
+                message = 'Loading'
+                fill = '*'
+                suffix = '%(percent).1f%% - %(eta)ds'
+
+        You can also override any of the arguments or create your own:
+
+        .. code-block:: python
+
+            class SlowBar(Bar):
+                suffix = '%(remaining_hours)d hours remaining'
+                @property
+                def remaining_hours(self):
+                    return self.eta // 3600
+
+
+        Spinners
+        ========
+
+        For actions with an unknown number of steps you can use a spinner:
+
+        .. code-block:: python
+
+            from os_sys.progress import spinner
+
+            spinner = Spinner('Loading ')
+            while state != 'FINISHED':
+                # Do some work
+                spinner.next()
+
+        There are 5 predefined spinners:
+
+        - ``Spinner``
+        - ``PieSpinner``
+        - ``MoonSpinner``
+        - ``LineSpinner``
+        - ``PixelSpinner``
+
+        comming - ``working to a big update the 2.0.0 release``
+
+        home:
+            
+            plz visit my one website there you can post evry program for python that you want:
+
+            https://python-libs-com.webnode.nl/
+            
+
+        discription:                                                                                  
+            os_sys is a extra package for python(3)                                                                                  
+            it's a extra to have a more easy use of the normal python libs                                                                                  
+            plz look sometimes to my packages becuse i am making more own libs(extra is not that own lib)                                                                                  
+            if i have more info i while show it here                                                                                   
+            plz read the license                                                                                  
+            
+            
+
+
+
+        license:
+            Copyright (c) 2018 The Python Packaging Authority
+
+            Permission is hereby granted, free of charge, to any person obtaining a copy
+            of this software and associated documentation files (the "Software"), to deal
+            in the Software without restriction, including without limitation the rights
+            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+            copies of the Software, and to permit persons to whom the Software is
+            furnished to do so, subject to the following conditions:
+
+            The above copyright notice and this permission notice shall be included in all
+            copies or substantial portions of the Software.
+
+            THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+            SOFTWARE.
+        loading_bars:
+        Easy progress reporting for Python
+        ==================================
+
+        |pypi|
+
+
+
+        Bars
+        ----
+
+        There are 7 progress bars to choose from:
+
+        - ``Bar``
+        - ``ChargingBar``
+        - ``FillingSquaresBar``
+        - ``FillingCirclesBar``
+        - ``IncrementalBar``
+        - ``PixelBar``
+        - ``ShadyBar``
+
+        To use them, just call ``next`` to advance and ``finish`` to finish:
+
+        .. code-block:: python
+
+            from os_sys.progress import bar
+
+            bar = Bar('Processing', max=20)
+            for i in range(20):
+                # Do some work
+                bar.next()
+            bar.finish()
+
+        or use any bar of this class as a context manager:
+
+        .. code-block:: python
+
+            from os_sys.progress import bar
+
+            with Bar('Processing', max=20) as bar:
+                for i in range(20):
+                    # Do some work
+                    bar.next()
+
+        The result will be a bar like the following: ::
+
+            Processing |#############                   | 42/100
+
+        To simplify the common case where the work is done in an iterator, you can
+        use the ``iter`` method:
+
+        .. code-block:: python
+
+            for i in Bar('Processing').iter(it):
+                # Do some work
+
+        Progress bars are very customizable, you can change their width, their fill
+        character, their suffix and more:
+
+        .. code-block:: python
+
+            bar = Bar('Loading', fill='@', suffix='%(percent)d%%')
+
+        This will produce a bar like the following: ::
+
+            Loading |@@@@@@@@@@@@@                   | 42%
+
+        You can use a number of template arguments in ``message`` and ``suffix``:
+
+        ==========  ================================
+        Name        Value
+        ==========  ================================
+        index       current value
+        max         maximum value
+        remaining   max - index
+        progress    index / max
+        percent     progress * 100
+        avg         simple moving average time per item (in seconds)
+        elapsed     elapsed time in seconds
+        elapsed_td  elapsed as a timedelta (useful for printing as a string)
+        eta         avg * remaining
+        eta_td      eta as a timedelta (useful for printing as a string)
+        ==========  ================================
+
+        Instead of passing all configuration options on instatiation, you can create
+        your custom subclass:
+
+        .. code-block:: python
+
+            class FancyBar(Bar):
+                message = 'Loading'
+                fill = '*'
+                suffix = '%(percent).1f%% - %(eta)ds'
+
+        You can also override any of the arguments or create your own:
+
+        .. code-block:: python
+
+            class SlowBar(Bar):
+                suffix = '%(remaining_hours)d hours remaining'
+                @property
+                def remaining_hours(self):
+                    return self.eta // 3600
+
+
+        Spinners
+        ========
+
+        For actions with an unknown number of steps you can use a spinner:
+
+        .. code-block:: python
+
+            from os_sys.progress import spinner
+
+            spinner = Spinner('Loading ')
+            while state != 'FINISHED':
+                # Do some work
+                spinner.next()
+
+        There are 5 predefined spinners:
+
+        - ``Spinner``
+        - ``PieSpinner``
+        - ``MoonSpinner``
+        - ``LineSpinner``
+        - ``PixelSpinner``
+
+        comming - ``working to a big update the 2.0.0 release``
+
+        home:
+            
+            plz visit my one website there you can post evry program for python that you want:
+
+            https://python-libs-com.webnode.nl/
+            
+
+
+setup data:
+    name="os_sys",
+    version="1.0.1",#.dev moet dan hier
+    author="Matthijs labots",
+    contact="python_libs",
+    license='MIT License',
+    contact_email="py.libs@gmail.com",
+    author_email="py.libs@gmail.com",
+    description="a big lib with many usefull tools and it are not only os and sys tools...",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://python-libs-com.webnode.nl/",
+    python_requires='>=3',
+    entry_points={'console_scripts': [
+        'os_sys-updater = os_sys.commands:update',
+        'os_sys-download-setup_script = os_sys.commands:download_zip',
+        'os_sys-if_not_work-write_new_scripts = os_sys.commands:init',
+        'os_sys-setup_data-writer = os_sys.commands:init',
+        'os_sys-re-init-os_sys = os_sys.commands:init',
+        'os_sys-admin = os_sys.commands:run',
+        'os_sys-re_installer = os_sys.commands:re_install',
+        'os_sys-run-py_check = os_sys.commands:run_py_check',
+        'os_sys-admin-run = os_sys.commands:test',
+        'os_sys-text-editor = os_sys.commands:make_text',
+        'os_sys-installer = os_sys.commands:install',
+        'os_sys-easy-installer = os_sys.commands:install',
+        'os_sys-easy-packages-installer = os_sys.commands:install',
+        'os_sys-easy-install = os_sys.commands:install',
+        'os_sys-console = os_sys.commands:setup_os_sys',
+        'os_sys-setup = os_sys.commands:setup_os_sys',
+        
+        
+    ]},
+    include_package_data=True,
+    package_data=package_data,
+    packages=list(list(package_data) + ['os_sys']),
+    install_requires=['progress', 'tqdm', 'progressbar', 'matplotlib', 'numpy',
+                      'jupyter', 'pandas', 'bs4', "Eel", "extract-zip", "text-editor"
+                      ],
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        'Topic :: Software Development :: Libraries :: Python Modules',
+        'Framework :: IDLE',
+        'Natural Language :: Dutch',
+        'Natural Language :: English',
+        "Programming Language :: Python :: 3.0",
+        "Programming Language :: Python :: 3.1",
+        "Programming Language :: Python :: 3.2",
+        "Programming Language :: Python :: 3.3",
+        "Programming Language :: Python :: 3.4",
+        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python",
+        'Topic :: Internet',
+        'Topic :: Other/Nonlisted Topic',
+        'Topic :: Scientific/Engineering :: Mathematics',
+        'Topic :: Scientific/Engineering :: Visualization',
+        'Topic :: Software Development :: Build Tools',
+        'Topic :: Software Development :: User Interfaces',
+        'Topic :: Software Development',
+        'Topic :: Scientific/Engineering',
+        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
+        
+
+        ],
+    project_urls={
+        'all files': 'https://github.com/Matthijs990/os_sys',
+        'Downloads': 'https://python-libs-com.webnode.nl/downloads/',
+        'become a member': 'https://python-libs-com.webnode.nl/user-registration/',
+        'download all files': 'https://github.com/Matthijs990/os_sys.git',
+        'want to help': 'https://github.com/Matthijs990/os_sys/tree/master/do%20you%20want%20to%20help',
+        'startpage': 'https://pypi.org/project/os-sys/',
+        'made possible by': 'https://pypi.org',
+        'help': 'https://github.com/Matthijs990/os_sys/issues',
+        'github wiki(under development)': 'https://github.com/Matthijs990/os_sys/wiki',
+        'just a chat to talk about python': 'https://github.com/Matthijs990/chat/issues/1',
+        'github': 'https://github.com/Matthijs990/os_sys',
+        'open os_sys wiki': 'https://python-libs-com.webnode.nl/open-os-sys-wiki/',
+        'officail wiki(under development)': 'https://python-libs-com.webnode.nl/os-sys-wiki/',
+        'gitlab': 'https://gitlab.com/Matthijs990/os_sys',
+
+    },
+

@@ -171,7 +171,7 @@ def v():
 
 setuptools.setup(
     name="os_sys",
-    version="1.0.1",#.dev moet dan hier
+    version="1.0.8",#.dev moet dan hier
     author="Matthijs labots",
     contact="python_libs",
     license='MIT License',

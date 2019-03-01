@@ -1,4 +1,7 @@
-﻿include:
+﻿
+
+
+include:
 
     introduction
     
@@ -179,6 +182,12 @@ There are 5 predefined spinners:
 - ``MoonSpinner``
 - ``LineSpinner``
 - ``PixelSpinner``
+
+comming - ``working to a big update the 2.0.0 release``
+
 home:
+    
     plz visit my one website there you can post evry program for python that you want:
+
     https://python-libs-com.webnode.nl/
+    

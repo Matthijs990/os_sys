@@ -397,19 +397,7 @@ bar = progress_bar_loading()
 
 if __name__ == '__main__':
     test()
-try:
-    from . import _progress as progress
-except ImportError:
-    pass
-    try:
-        from os_sys import _progress as progress
-    except Exception:
-        pass
-        try:
-            
-            import _progress as progress
-        except Exception:
-            pass
+
         
 
 def bar(rn, fill='.'):
@@ -426,6 +414,7 @@ def bar(rn, fill='.'):
 if __name__ == '__main__':
      for rn in range(1, 101):
         bar(rn)
+
 from progress.bar import *
 from progress.spinner import *
 from progress.counter import *

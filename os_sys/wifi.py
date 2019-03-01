@@ -194,7 +194,7 @@ def ping_data(aantal, taak):
         print('percentage that has not been lost: ' + str(procent) + '%')
         print('percentage that has been lost: ' + str(n_procent) + '%')
     return [max_time, min_time, middel, totaal, procent, n_procent, aantal, int(aantal - faal), tt]
-ping_data(1000, "print")
+
 def filter_regel(zinig):
     if not zinig == str:
         zinig = str(zinig)

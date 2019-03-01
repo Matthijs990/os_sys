@@ -12,21 +12,21 @@ class progress_bar_loading(threading.Thread):
             import time
             global stop
             global kill
-            print('Working....  ', file=sys.stderr)
+            print('Working....  ', file=sys.stdout)
             sys.stderr.flush()
             i = 0
             while stop != True:
                     if (i%4) == 0: 
-                        sys.stderr.write('\b')
+                        sys.stdout.write('|')
                     elif (i%4) == 1: 
-                        sys.stderr.write('\b')
+                        sys.stdout.write('|')
                     elif (i%4) == 2: 
-                        sys.stderr.write('\b')
+                        sys.stdout.write('|')
                     elif (i%4) == 3: 
-                        sys.stderr.write('\b')
+                        sys.stdout.write('|')
                     import time
 
-                    sys.stderr.flush()
+                    sys.stdout.flush()
                     time.sleep(0.2)
                     i+=1
 
@@ -56,6 +56,7 @@ def nu():
     return time()
 def setup_os_sys():
     global stop, kill
+    stop = False
     #add arguments
     """
     import argparse
@@ -74,7 +75,8 @@ this are the commands to config os_sys:\n\
 download = download the newest os_sys package.\n\
 upgrade = upgrade os_sys to the newest version.\n\
 uninstall = remove os_sys form your pc.\n\
-install-version = install a version of os_sys that you choise.")
+install-version = install a version of os_sys that you choise.\n\
+config-os_sys-settings = config os_sys.")
     command = input("what you want to do:\n")
     loading = progress_bar_loading()
     loading.start()
@@ -95,9 +97,51 @@ install-version = install a version of os_sys that you choise.")
     elif command == 'install-version':
         version_install = input('witch version of os_sys you want to install?')
         cmd('python -m pip install --upgrade os_sys version'.replace('version', version_install))
+    elif command == 'config-os_sys-settings':
+        stop = True
+        settings = open('settings.config', 'w+')
+        sett = settings.read()
+        settings.close()
+        del settings
+        settings = sett
+        print(sett)
+        _input = input('what setting you want to change?:')
+        settings = settings.split('\n')
+        for x in range(o, len(settings)):
+            key, ans = str(settings[x]).split('=')
+        dictory = dict()
+        for i in range(0, len(key)):
+            dictory[key[i]] = ans[i]
+            
+        if _input in dictory:
+            
+            dictory[_input] = input('set setting:\n')
+        else:
+            dictory[_input] = input('set setting:\n')
+        with open('settings.config', mode='w+') as fh:
+            for k in range(0, len(dictory)):
+                keys = list(dictory)
+                key = keys[k]
+                fh.write(str(key) + '=' + str(dictory[key]))
+    
+            
+        
     else:
         raise TypeError('unknown argument')
     stop = True
+    import time
+    time.sleep(0.1)
+    def ask():
+        more = input('continue?(typ yes or no):')
+        if more.lower() == 'yes' or 'y' or 'ja' or 'jes':
+            setup_os_sys()
+            del loading
+        elif more.lower() == 'no' or 'n':
+            pass
+        else:
+            print('you need to typ yes or no you give the input %s' % more.lower())
+            ask()
+    ask()
     class cmd1:
         pass
     class cmd2:
