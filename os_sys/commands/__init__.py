@@ -58,18 +58,21 @@ def setup_os_sys():
     global stop, kill
     stop = False
     #add arguments
-    """
+    
     import argparse
     parser = argparse.ArgumentParser(prog='os_sys-config', description='from here you can config os_sys')
-    parser.add_argument('-c', '--command', nargs='?', help='help for -c or -command typ a command to config os_sys the commands are:\n\
+    parser.add_argument('-c', '--command', nargs='?', help='help for -c or --command:\n\
+    welkom at the os_sys console/setup from here out you can config os_sys.\n\
+    this are the commands to config os_sys:\n\
     download(download the os_sys .tar and .wheel files)\n\
     uninstall(remove os_sys from your pc)\n\
-    upgrade(upgrade os_sys to the newest version)')
-    parser.add_argument('-d', nargs='?', help='help for -d blah')
-    parser.add_argument('-v', nargs='?', help='help for -v blah')
-    parser.add_argument('-w', nargs='?', help='help for -w blah')
+    upgrade(upgrade os_sys to the newest version)\n\
+    uninstall = remove os_sys form your pc.\n\
+    install-version = install a version of os_sys that you choise.\n\
+    config-os_sys-settings = config os_sys.
+    ')
     args = parser.parse_args()
-    """
+    
     print("welkom at the os_sys console/setup from here out you can config os_sys.\n\
 this are the commands to config os_sys:\n\
 download = download the newest os_sys package.\n\
@@ -78,6 +81,92 @@ uninstall = remove os_sys form your pc.\n\
 install-version = install a version of os_sys that you choise.\n\
 config-os_sys-settings = config os_sys.")
     command = input("what you want to do:\n")
+    loading = progress_bar_loading()
+    loading.start()
+    command = command.lower()
+    if command == 'download':
+        try:
+            cmd('pip download os_sys')
+        except Exception:
+            pass
+            try:
+                cmd('python -m pip download os_sys')
+            except Exception as ex:
+                raise Exception(ex)
+    elif command == 'uninstall':
+        cmd('python -m pip uninstall os_sys')
+    elif command == 'upgrade':
+        cmd('python -m pip install --upgrade os_sys')
+    elif command == 'install-version':
+        version_install = input('witch version of os_sys you want to install?')
+        cmd('python -m pip install --upgrade os_sys version'.replace('version', version_install))
+    elif command == 'config-os_sys-settings':
+        stop = True
+        settings = open('settings.config', 'w+')
+        sett = settings.read()
+        settings.close()
+        del settings
+        settings = sett
+        print(sett)
+        _input = input('what setting you want to change?:')
+        settings = settings.split('\n')
+        for x in range(o, len(settings)):
+            key, ans = str(settings[x]).split('=')
+        dictory = dict()
+        for i in range(0, len(key)):
+            dictory[key[i]] = ans[i]
+            
+        if _input in dictory:
+            
+            dictory[_input] = input('set setting:\n')
+        else:
+            dictory[_input] = input('set setting:\n')
+        with open('settings.config', mode='w+') as fh:
+            for k in range(0, len(dictory)):
+                keys = list(dictory)
+                key = keys[k]
+                fh.write(str(key) + '=' + str(dictory[key]))
+    
+            
+        
+    else:
+        raise TypeError('unknown argument')
+    stop = True
+    import time
+    time.sleep(0.1)
+    def ask():
+        more = input('continue?(typ yes or no):')
+        if more.lower() == 'yes' or 'y' or 'ja' or 'jes':
+            setup_os_sys()
+            del loading
+        elif more.lower() == 'no' or 'n':
+            pass
+        else:
+            print('you need to typ yes or no you give the input %s' % more.lower())
+            ask()
+    ask()
+    class cmd1:
+        pass
+    class cmd2:
+        pass
+def setup_os_sys1():
+    global stop, kill
+    stop = False
+    #add arguments
+    
+    import argparse
+    parser = argparse.ArgumentParser(prog='os_sys-config', description='from here you can config os_sys')
+    parser.add_argument('-c', '--command', 'command', nargs='?', help='help for -c or --command:\n\
+    welkom at the os_sys console/setup from here out you can config os_sys.\n\
+    this are the commands to config os_sys:\n\
+    download(download the os_sys .tar and .wheel files)\n\
+    uninstall(remove os_sys from your pc)\n\
+    upgrade(upgrade os_sys to the newest version)\n\
+    uninstall = remove os_sys form your pc.\n\
+    install-version = install a version of os_sys that you choise.\n\
+    config-os_sys-settings = config os_sys.')
+    args = parser.parse_args()
+    command = args.c
     loading = progress_bar_loading()
     loading.start()
     command = command.lower()

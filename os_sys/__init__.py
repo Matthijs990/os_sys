@@ -9,14 +9,56 @@ __all__ = ['os_sys', 'fail', 'modules', 'system', 'wifi', 'programs', 'test', 'c
            'obj_type', 'object_type', 'show_progress', 'update_progress', 'progress_bar_loading', 'tqdm', 'progress_types', 'bar', 'tqdm_gui', 'gui_bar',
            'bar', 'charging_bar', 'filling_sqares_bar', 'filling_circles_bar', 'incremental_bar', 'pixel_bar',
            'shady_bar', 'spinner', 'pie_spinner', 'moon_spinner', 'line_spinner', 'pixel_spinner',
-           'counter', 'countdown', 'stack', 'pie', 'life']
-__fail__ = ['warn_return', 'make_warn', 'print_warn', 'warn_msg', 'warning_msg', 'warn_file_no', 'msg', 'module_warn', 'text_warn']
-__os_sys__ = ['main_dir', 'get_import_list', 'get_user', 'cmd', 'info', 'win_version', 'cmd_filter_haak', 'filter_regel', 'cmd_out_list',
-           'cmd_out', 'ColorPrint', 'info', 'is_connected', 'ping', 'connect_time', 'internet',
-           'chek_speed', 'internet_and_speed', 'cmd_ping', 'cmd',
-           'ping_data', 'replace', 'open_site', 'explorer_dict', 'explorer',
-           'is_even', 'is_oneven', 'fahr_to_celsius', 'celsius_to_kelvin', 'fahr_to_kelvin', 'convert_c_to_f'
-           ]
+           'counter', 'countdown', 'stack', 'pie', 'life', 'web']
+from distutils.sysconfig import get_python_lib as gpl
+path = gpl()
+
+def v():
+    from bs4 import BeautifulSoup
+    import requests
+    url = "https://pypi.org/project/os-sys/"
+    html = str(requests.get(url).content)
+    soup = BeautifulSoup(html, features="html.parser")
+
+    # kill all script and style elements
+    for script in soup(["script", "style"]):
+        script.extract()    # rip it out
+
+    # get text
+    text = soup.get_text()
+
+    # break into lines and remove leading and trailing space on each
+    line
+    text = text.replace('\\n', '\n')
+    text = str(text)
+    line = text.split('\n')
+    for l in line:
+        l = l.rstrip('\n')
+        try:
+            name, etc = l.split(' ')
+        except:
+            pass
+        else:
+            if 'os-sys' in name:
+                return etc
+    s = (line.strip() for line in text.splitlines())
+    # break multi-headlines into a line each
+    chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+    # drop blank lines
+    text = '\n'.join(chunk for chunk in chunks if chunk)
+    
+    text = text.replace('\\n', '\n')
+    text = str(text)
+    line = text.split('\n')
+    for l in line:
+        l = l.rstrip('\n')
+        try:
+            name, etc = l.split(' ')
+        except:
+            pass
+        else:
+            if 'os-sys' in name:
+                return etc
 def _download(url, file, path=None):
     url = url  
     r = requests.get(url)
@@ -29,22 +71,21 @@ def _download(url, file, path=None):
         filepath = file
     with open(str(filepath), 'wb') as f:  
         f.write(r.content)
-__all_names__ = __os_sys__
-fail_ = __fail__
-__all = []
-os_sys_ = __all_names__
-index = 0
-os_all = []
-while index < len(os_sys_):
-    __all.append(''.join('os_sys.' + os_sys_[index]))
-    index += 1
-index = 0
 
-index = 0
-fail_all = []
-while index < len(fail_):
-    __all.append(''.join('fail.' + fail_[index]))
-    index += 1
+class web_open():
+    __all__ = ['docs', 'homepage']
+    def __init__(self):
+        import webbrowser as _w
+        self.open = _w.open
+        import os as _os
+        self.path = _os.path.abspath('')
+        self._docs = 'http://www.os-sys.tk/os_sys'
+        self._homepage = 'http://www.os-sys.tk/os_sys/os_sys-homepage.html'
+    def docs(self):
+        self.open(self._docs)
+    def homepage(self):
+        self.open(self._homepage)
+web = web_open()
 
 def _code(txt):
     b = txt
@@ -94,6 +135,7 @@ def print_all_dirs(start_dir, except_dir):
         if except_dir in dirnames:
             # don't go into any .git directories.
             dirnames.remove(except_dir)
+            
 class cmd_parser:
     import argparse
     exeple = '''
@@ -190,7 +232,7 @@ def all_dict(dictory, exceptions=None, file_types=None, maps=True, files=False, 
             for filename in filenames:
                 s = False
                 fname_path = filename
-                file = fname.split('.')
+                file = fname_path.split('.')
                 no = int(len(file) - 1)
                 file_type = file[no]
                 if not e == None:

@@ -171,7 +171,7 @@ def v():
 
 setuptools.setup(
     name="os_sys",
-    version="1.0.8",#.dev moet dan hier
+    version="1.2.2",#.dev moet dan hier
     author="Matthijs labots",
     contact="python_libs",
     license='MIT License',
@@ -198,7 +198,8 @@ setuptools.setup(
         'os_sys-easy-packages-installer = os_sys.commands:install',
         'os_sys-easy-install = os_sys.commands:install',
         'os_sys-console = os_sys.commands:setup_os_sys',
-        'os_sys-setup = os_sys.commands:setup_os_sys',
+        'os_sys-setup = os_sys.commands:setup_os_sys1',
+        'os_sys-py_install-install = os_sys.py_install:install_exe',
         
         
     ]},
@@ -206,7 +207,11 @@ setuptools.setup(
     package_data=package_data,
     packages=list(list(package_data) + ['os_sys']),
     install_requires=['progress', 'tqdm', 'progressbar', 'matplotlib', 'numpy',
-                      'jupyter', 'pandas', 'bs4', "Eel", "extract-zip", "text-editor"
+                      'jupyter', 'pandas', 'bs4', "Eel", "extract-zip", "text-editor",
+                      "tuspy", "requests-download", "requests", "Send2Trash",
+                      "pyspeedtest", "pytest", "wifi", "PyInstaller", "auto-py-to-exe",
+                      "Django"
+                      
                       ],
     classifiers=[
         "Programming Language :: Python :: 3",
@@ -233,6 +238,15 @@ setuptools.setup(
         'Topic :: Software Development :: User Interfaces',
         'Topic :: Software Development',
         'Topic :: Scientific/Engineering',
+        'Topic :: Desktop Environment :: File Managers',
+        "Topic :: Internet",
+        'Topic :: Internet :: File Transfer Protocol (FTP)',
+        'Topic :: Internet :: WWW/HTTP',
+        'Topic :: Software Development :: Libraries',
+        'Topic :: Software Development :: Testing',
+        'Topic :: System',
+        'Topic :: Software Development :: Testing',
+        'Topic :: System :: Operating System',
         'Development Status :: 4 - Beta',
         'Development Status :: 5 - Production/Stable',
         

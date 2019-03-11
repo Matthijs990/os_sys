@@ -1,11 +1,18 @@
-﻿
+﻿new:
+===========================
+py_install,
+upload lib(updated),
+updated console,
+os_sys, wifi and fail are updated
+
+
 
 
 include:
+===========================
 
     introduction
-    
-    sorry                                                                                  
+                                                                                 
     	
     description                                                                                                                                                                    
     	
@@ -14,18 +21,16 @@ include:
     loading_bars
 
 introduction:
-
+===========================
 
     to install os_sys you type: pip install os_sys                                                                                  
     to upgrade os_sys you type: pip install --upgrade os_sys                                                                                  
     so lets get start to install os_sys                                                                                  
 
-sorry:                                                                                  
-    i am dutch and i never had a mind about it while become this far so some commands are in dutch.                                                                                  
-    the most commands are english but sorry if you not understand some commands.                                                                                  
-    the most new packages and update's while be in english                                                                                  
+                                                                                
 
-discription:                                                                                  
+discription:
+===========================
     os_sys is a extra package for python(3)                                                                                  
     it's a extra to have a more easy use of the normal python libs                                                                                  
     plz look sometimes to my packages becuse i am making more own libs(extra is not that own lib)                                                                                  
@@ -37,6 +42,7 @@ discription:
 
 
 license:
+===========================
     Copyright (c) 2018 The Python Packaging Authority
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -186,6 +192,7 @@ There are 5 predefined spinners:
 comming - ``working to a big update the 2.0.0 release``
 
 home:
+===========================
     
     plz visit my one website there you can post evry program for python that you want:
 
