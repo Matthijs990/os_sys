@@ -1,27 +1,27 @@
 ##OS_Sys
 
 Newest features:
-===========================
+
 os_sys, wifi and fail have been updated
 
 
 
 
 Index:
-===========================
+
 
 Installation
 description
 loading_bars
 
 Installation:
-===========================
+
 
 Installation command (in your shell, ex. cmd, bash): python -m pip install --upgrade os_sys
                                                                                 
 
 description:
-===========================
+
 os_sys is a package for python 3.
     
 
@@ -30,7 +30,7 @@ os_sys is a package for python 3.
 
 loading_bars:
 Easy progress visualization for Python
-==================================
+
 
 ####Pypi
 
@@ -122,7 +122,7 @@ You can also override any of the arguments or create your own:
 
 
 Spinners
-========
+
 
 For actions with an unknown number of steps you can use a spinner:
 
