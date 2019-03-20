@@ -132,7 +132,8 @@ For actions with an unknown number of steps you can use a spinner:
     spinner = Spinner('Loading ')
     while state != 'FINISHED':
         # Do some work
-        spinner.next()</code>
+        spinner.next()
+        </code>
 
 There are 5 predefined spinners:
 
